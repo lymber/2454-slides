@@ -7,14 +7,69 @@
     <title>Curvas - Definição e Exemplos</title>   
 
     <p><definition xml:id="def-curva">
-	<statement>
+      <statement>
           <p>Uma <term>curva parametrizada em <m>\R^n</m></term> é uma
           função <m>\gamma\colon I\subseteq\to\R^n</m>.</p>
 	  <p>O <term>traço de <m>\gamma</m></term> é a imagem de
-	  <m>\gamma</m>: <m>\Im\gamma = \big\{\gamma(t)\in\R^n\colon t\in
+	  <m>\gamma</m>: <m>\im\gamma = \big\{\gamma(t)\in\R^n\colon t\in
 	  I\big\}.</m></p>
-	</statement>
+	  <figure xml:id="fig_def-curva">
+	    <image width="100%">
+	      <latex-image>
+		\begin{tikzpicture}[scale=2]
+		\draw (-3,1) -- (-2,-1) node[left] {$t$};
+		\draw (0,2) -- (0,4) node[right] {$x$};
+		\draw (0,-1) -- (0,1) node[right] {$y$};
+		\filldraw (-2.5,0) circle (1pt) node[left]
+		{$t_0$};
+		\draw[dashed] (-2.5,0) to[bend left]
+		node[above] {$f$} (0,3); 
+		\filldraw (0,3) circle (1pt)
+		node[right] {$f(t_0)=x_0$}; 
+		\draw[dashed] (-2.5,0) to[bend left]
+		node[above] {$g$} (0,0); 
+		\filldraw (0,0) circle (1pt) 
+		node[right] {$g(t_0)=y_0$}; 
+		\end{tikzpicture}
+	      </latex-image>
+	    <!--   <latex-image> -->
+	    <!--   \begin{tikzpicture}[declare -->
+            <!--   function={f(\t)=1.5+sin(\t r);g(\t)=1+sin(2*\t r);}] -->
+            <!--   \newcommand{\p}{pi/6} -->
+
+	    <!--   \draw[-&gt;] (-.5,0) -\- (3,0) node[below] {$x$}; -->
+            <!--   \draw[-&gt;] (0,-.5) -\- (0,3) node[right] {$y$}; -->
+              
+            <!--   \draw[dashed] ({f(\p)},{g(\p)}) -\- ({f(\p)},0); -->
+            <!--   \draw[dashed] ({f(\p)},{g(\p)}) -\- (0,{g(\p)}); -->
+              
+            <!--   \draw[red, -->
+	    <!--   thick,variable=\t,domain=-pi/6:3*pi/2,samples=80] plot -->
+	    <!--   ({f(\t)},{g(\t)}); -->
+              
+            <!--   \filldraw ({f(\p)},{g(\p)}) circle (1pt); -->
+	      
+            <!--   \draw (-1.2,-.1) -\- (-.2,-1.1) -->
+	    <!--   node[below] {$t$}; -->
+            <!--   \filldraw (-.7,-.6) circle (1pt) -->
+	    <!--   node[left] {$t_0$}; -->
+        
+            <!--   \draw[dashed (-.7,-.6) to[bend right] -->
+	    <!--   node[below] {$f$} ({f(\p)},0); -->
+	    <!--   \filldraw ({f(\p)},0) circle (1pt) -->
+	    <!--   node[below] {$x_0$}; -->
+
+            <!--   \draw[dashed] (-.7,-.6) to[bend left] -->
+	    <!--   node[left] {$g$} (0,{g(\p)}); -->
+            <!--   \filldraw (0,{g(\p)}) circle (1pt) -->
+	    <!--   node[left] {$y_0$}; -->
+	    <!--   \end{tikzpicture} -->
+	    <!--   </latex-image> -->
+	    </image>
+	  </figure>
+      </statement>
     </definition></p>
+    
     <dl pause="yes">
       <li><title>Caso de interesse: </title>
       <p pause="yes"><m>n=2</m> ou <m>n=3</m>.</p></li>
