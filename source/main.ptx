@@ -23,7 +23,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
       \usepgfplotslibrary{fillbetween}
       \usetikzlibrary{positioning,matrix,arrows}
       \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
-      \usetikzlibrary{decorations.markings} 
+      \usetikzlibrary{decorations.markings}
     </latex-image-preamble>
     <macros>
       \newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4}
@@ -32,7 +32,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
       \newcommand{\C}{\mathbb{C}}
       \newcommand{\nv}{\mathbf{0}}
       \DeclareMathOperator{\tr}{tr}
-      \DeclareMathOperator{\Im}{Im}
+      \DeclareMathOperator{\im}{Im}
     </macros>
   </docinfo>
 
