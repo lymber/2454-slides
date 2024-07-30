@@ -25,7 +25,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     <revealjs>
 	<!-- Themes options are "solarized", "sky", "moon", etc. -->
 	<!-- Full list of themes here: https://revealjs.com/themes/ -->
-        <appearance theme="league"/>
+        <appearance theme="sky"/>
         <!-- these are "resources" defaults, but best for a sample -->
         <!-- @minified is not even necessary with @host = 'cdn'    -->
         <resources host="cdn" /> <!--  minified="yes"/> -->
