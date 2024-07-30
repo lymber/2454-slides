@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--********************************************************************
+Copyright 2019 Robert A. Beezer
+This file is part of PreTeXt.
+PreTeXt is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+PreTeXt is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+<pretext xml:lang="pt-BR" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <docinfo>
+    <latex-image-preamble>
+      \usepackage{tikz, pgfplots}
+      \pgfplotsset{compat=newest}
+      \usepgfplotslibrary{fillbetween}
+      \usetikzlibrary{positioning,matrix,arrows}
+      \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+      \usetikzlibrary{decorations.markings} 
+    </latex-image-preamble>
+    <macros>
+      \newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4}
+      \newcommand{\N}{\mathbb{N}}
+      \newcommand{\R}{\mathbb{R}}
+      \newcommand{\C}{\mathbb{C}}
+      \newcommand{\nv}{\mathbf{0}}
+      \DeclareMathOperator{\tr}{tr}
+      \DeclareMathOperator{\Im}{Im}
+    </macros>
+  </docinfo>
+
+  <slideshow>
+    <title>MAT2454 - Cálculo Diferencial e Integral II</title>
+    <!-- <subtitle>para a Escola Politécnica</subtitle> -->
+    
+    <frontmatter>
+      <titlepage>
+        <author>
+          <personname>Alexandre Lymberopoulos</personname>
+          <institution>Departamento de Matemática -
+	  Universidade de São Paulo</institution>
+        </author>
+        <event>Escola Politécnica - Engenharia Mecatrônica</event>
+        <date>2024 - Segundo Semestre</date>
+      </titlepage>
+      
+      <!-- <abstract> -->
+      <!--   <p>An <tag>abstract</tag> can appear on an early slide, -->
+      <!--   optionally.  This is a standard component of a <pretext/> -->
+      <!--   <tag>article</tag> (but not of a <tag>book</tag>).</p> -->
+
+      <!--   <p>This is a second paragraph of the abstract for this wonderful -->
+      <!--   talk, just so we have something a bit more substantial.</p> -->
+      <!-- </abstract> -->
+
+    </frontmatter>
+    <xi:include href="./00-disc_info.ptx" />
+    <xi:include href="./01-curvas.ptx" />
+    <!-- <xi:include href="./99-sample_stuff.ptx" /> -->
+  </slideshow>
+</pretext>

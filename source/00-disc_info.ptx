@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="disc_info">
+  
+  <title>Informações do Curso</title>    
+
+  <slide>
+    <title>Cálculo 2 é continuação do Cálculo 1?</title>
+    <ol pause="yes">
+      <li>Sim e não...</li>
+      <li>Vamos estudar agora aspectos "diferenciais" de funções a
+      várias variáveis reais.</li>
+      <li>Para isso vamos precisar de muita coisa do Cálculo 1.</li>
+      <li>Nem sempre é possível reduzir a análise de funções
+      multidimensionais ao estudo de cada uma das variáveis
+      isoladamente.</li>
+      <li>Veremos muita coisa nova e com muitas aplicações modernas!</li>
+    </ol>
+  </slide>
+  
+  <slide>
+    <title>Ementa</title>
+    
+    <p><dl>
+      <li>
+	<title>Curvas em <m>\R^n</m>:</title>
+	<p>ferramenta básica para estudar funções a mais de uma variável.</p>
+      </li>      
+      <li>
+	<title>Fuções a várias variáveis reais:</title>
+	<p>limites, continuidade e difereciabilidade.</p>
+      </li>
+      <li>
+	<title>Gradiente e Regra da Cadeia.</title>
+      </li>
+      <li>
+	<title>Polinômios de Taylor.</title>
+      </li>
+      <li>
+	<title>Máximos e Mínimos.</title>
+      </li>
+    </dl></p>
+  </slide>
+
+  <slide>
+    <title>Avaliação e Critérios de Aprovação:</title>
+    
+    <p>Vide página específica no e-disciplinas.</p>
+  </slide>
+</section>
