@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="sup_quadricas">
+  <title>Superfícies Quádricas</title>
+
+  <slide>
+    <title>Superfícies quádricas - Definição e Exemplos</title>   
+
+    <p><definition xml:id="def-supquad">
+      <statement>
+          <p>Uma <term>superfície quádrica em <m>\R^3</m></term> é o
+          conjunto dos pontos <m>(x,y,z)</m> do espaço que satifas uma
+	  equação do tipo
+	  <me>ax^2+by^2+cz^2+dxy+exz+fyz+hx+iy+jz+k=0,</me> onde
+	  <m>a,b,c,d,e,f,g,h,i,j,k</m> são constantes reais.</p>
+      </statement>
+    </definition></p>
+    
+    <dl pause="yes">
+      <li><title>Equações Reduzidas:</title>
+      <p><m>ax^2+by^2+cz^2+k=0</m></p>
+      <p>Sempre existem um sistema de coordenadas onde a equação geral é
+      descrita na forma reduzida.</p></li>
+      <li><title>Exemplos:</title>
+      <p pause="yes">Casos na forma reduzida <url
+      href="https://www.ime.usp.br/~lymber/teaching/quadricas/">aqui</url>.</p></li>
+      <li><title>Esboço de curvas em <m>\R^3</m>:</title>
+      <ol marker="i" pause="yes" cols="2">
+        <li><p><m>\gamma(t)=(\cos t, \sin t,2)</m>, <m>t\in\R</m>.</p></li>
+        <li><p><m>\gamma(t)=(\cos(t),\sin t, t)</m>,
+        <m>t\in[0,2\pi]</m>.</p></li>
+        <li><p><m>\gamma(t)=(\cos t,\cos t,\sqrt{2}\sin t)</m>,
+        <m>t\in[0,2\pi]</m>.</p></li>
+        <li><p><m>\gamma(t)=(e^{-t}\cos2 t,e^{-t}\sin t,e^{-t})</m>, <m>t\in\R</m>.</p></li>
+        <li><p><m>\gamma(t)=(\sqrt{t^2+1}\cos t,\sqrt{t^2+1}\sin t,t)</m>,
+        <m>t\in\R</m>.</p></li>
+      </ol></li>
+    </dl>
+  </slide>
+
+</section>
