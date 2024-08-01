@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 
-<section xml:id="esp_vet">
+<section xml:id="curvas">
   <title>Curvas</title>
 
   <slide>
@@ -13,60 +13,6 @@
 	  <p>O <term>traço de <m>\gamma</m></term> é a imagem de
 	  <m>\gamma</m>: <m>\im\gamma = \big\{\gamma(t)\in\R^n\colon t\in
 	  I\big\}.</m></p>
-	  <figure xml:id="fig_def-curva">
-	    <image width="100%">
-	      <latex-image>
-		\begin{tikzpicture}[scale=2]
-		\draw (-3,1) -- (-2,-1) node[left] {$t$};
-		\draw (0,2) -- (0,4) node[right] {$x$};
-		\draw (0,-1) -- (0,1) node[right] {$y$};
-		\filldraw (-2.5,0) circle (1pt) node[left]
-		{$t_0$};
-		\draw[dashed] (-2.5,0) to[bend left]
-		node[above] {$f$} (0,3); 
-		\filldraw (0,3) circle (1pt)
-		node[right] {$f(t_0)=x_0$}; 
-		\draw[dashed] (-2.5,0) to[bend left]
-		node[above] {$g$} (0,0); 
-		\filldraw (0,0) circle (1pt) 
-		node[right] {$g(t_0)=y_0$}; 
-		\end{tikzpicture}
-	      </latex-image>
-	    <!--   <latex-image> -->
-	    <!--   \begin{tikzpicture}[declare -->
-            <!--   function={f(\t)=1.5+sin(\t r);g(\t)=1+sin(2*\t r);}] -->
-            <!--   \newcommand{\p}{pi/6} -->
-
-	    <!--   \draw[-&gt;] (-.5,0) -\- (3,0) node[below] {$x$}; -->
-            <!--   \draw[-&gt;] (0,-.5) -\- (0,3) node[right] {$y$}; -->
-              
-            <!--   \draw[dashed] ({f(\p)},{g(\p)}) -\- ({f(\p)},0); -->
-            <!--   \draw[dashed] ({f(\p)},{g(\p)}) -\- (0,{g(\p)}); -->
-              
-            <!--   \draw[red, -->
-	    <!--   thick,variable=\t,domain=-pi/6:3*pi/2,samples=80] plot -->
-	    <!--   ({f(\t)},{g(\t)}); -->
-              
-            <!--   \filldraw ({f(\p)},{g(\p)}) circle (1pt); -->
-	      
-            <!--   \draw (-1.2,-.1) -\- (-.2,-1.1) -->
-	    <!--   node[below] {$t$}; -->
-            <!--   \filldraw (-.7,-.6) circle (1pt) -->
-	    <!--   node[left] {$t_0$}; -->
-        
-            <!--   \draw[dashed (-.7,-.6) to[bend right] -->
-	    <!--   node[below] {$f$} ({f(\p)},0); -->
-	    <!--   \filldraw ({f(\p)},0) circle (1pt) -->
-	    <!--   node[below] {$x_0$}; -->
-
-            <!--   \draw[dashed] (-.7,-.6) to[bend left] -->
-	    <!--   node[left] {$g$} (0,{g(\p)}); -->
-            <!--   \filldraw (0,{g(\p)}) circle (1pt) -->
-	    <!--   node[left] {$y_0$}; -->
-	    <!--   \end{tikzpicture} -->
-	    <!--   </latex-image> -->
-	    </image>
-	  </figure>
       </statement>
     </definition></p>
     
@@ -117,18 +63,27 @@
   </slide>
   
   <slide>
-    <title>Curvas Planas - Esboços</title>
+    <title>Curvas - Esboços</title>
 
-    <ol marker="i" pause="yes">
-      <li><p><m>\gamma(t)=(1-3t,2-t)</m>, <m>t\in\R</m>.</p></li>
-      <li><p><m>\gamma(t)=(\cos(t),-\sin t)</m>,
-      <m>t\in[0,2\pi]</m>.</p></li>
-      <li><p><m>\gamma(t)=(3\cos t,2\sin t)</m>, <m>t\in\R</m>.</p></li>
-      <li><p><m>\gamma(t)=(\cos^2 t,\sin t)</m>, <m>t\in\R</m>.</p></li>
-      <li><p><m>\gamma(t)=(e^t\cos t,e^t\sin t)</m>,
-      <m>t\in\R</m>.</p></li>
-      <li><p><m>\gamma(t)=(2+e^{-t},3+e^t)</m>, <m>t\in\R</m>.</p></li>
-    </ol>
+    <dl pause="pause">
+      <li><title>No plano:</title>
+      <ol marker="i" pause="yes">
+	<li><p><m>\gamma(t)=(1-3t,2-t)</m>, <m>t\in\R</m>.</p></li>
+	<li><p><m>\gamma(t)=(\cos(t),-\sin t)</m>,
+	<m>t\in[0,2\pi]</m>.</p></li>
+	<li><p><m>\gamma(t)=(3\cos t,2\sin t)</m>, <m>t\in\R</m>.</p></li>
+	<li><p><m>\gamma(t)=(\cos^2 t,\sin t)</m>, <m>t\in\R</m>.</p></li>
+	<li><p><m>\gamma(t)=(e^t\cos t,e^t\sin t)</m>,
+	<m>t\in\R</m>.</p></li>
+	<li><p><m>\gamma(t)=(2+e^{-t},3+e^t)</m>, <m>t\in\R</m>.</p></li>
+      </ol>
+      </li>
+      <li><title>No espaço:</title>
+      <p>Mesma ideia, mas com uma coordenada a mais;</p>
+      <p>Conhecer algumas superfícies nos ajudará a entender melhor a
+      imagem dessas curvas. Já vemos isso!</p>
+      </li>
+    </dl>
   </slide>
 
   <slide>
@@ -141,15 +96,19 @@
       pedida.</p>
       <p>Existem muitas parametrizações para uma mesma curva.</p></li>
       <li><title>Exemplos:</title>
-      <p pause="yes">Exemplo 1</p>
-      <p pause="yes">Exemplo 2</p></li>
+      <p pause="yes"><m>C=\big\{(x,y)\in\R^2\colon
+      \frac{(x-3)^2}{4}+\frac{(x-2)^2}{9}=1\big\}</m>;</p>
+      <p pause="yes"><m>C=\big\{(x,y)\in\R^2\colon
+      y^2-x^2=1, y\leq 0\big\}</m>.</p></li>
       <li><title>No espaço:</title>
       <p>Agora procuramos <m>\gamma(t)=\big(x(t),y(t),z(t)\big)</m></p>
       <p>Conhecer algumas superfícies onde a trajetoria está contida
       pode ajudar.</p></li>
       <li><title>Exemplos:</title>
-      <p pause="yes">Exemplo 1</p>
-      <p pause="yes">Exemplo 2</p>
+      <p pause="yes"><m>C=\big\{(x,y,z)\in\R^3\colon
+      x^2+y^2=1\text{ e } y+z=1\big\}</m>;</p>
+      <p pause="yes"><m>C=\big\{(x,y,z)\in\R^3\colon
+      x^2+y^2-z^2=1\text{ e } y+z=1\big\}</m>.</p>
       </li>
     </dl>
   </slide>
