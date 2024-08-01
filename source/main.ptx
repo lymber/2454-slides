@@ -63,6 +63,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     </frontmatter>
     <xi:include href="./00-disc_info.ptx" />
     <xi:include href="./01-curvas.ptx" />
+    <xi:include href="./02-sup_quadricas.ptx" />
     <!-- <xi:include href="./99-sample_stuff.ptx" /> -->
   </slideshow>
 </pretext>
