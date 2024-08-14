@@ -1,77 +1,83 @@
 <?xml version='1.0' encoding='utf-8'?>
 
-<section xml:id="curvas">
-  <title>Curvas</title>
+<section xml:id="complexos_edo">
+  <title>Números Complexos e Equações Diferenciais Ordinárias</title>
 
   <slide>
     <title>Números Complexos - Definição</title>
 
-    <p pause="yes">É uma longa e bonita história... Infelizmente não
-    temos tempo para contá-la aqui.</p>
-    
-    <p><definition xml:id="def-curva">
+    <p><definition xml:id="def-complexos">
       <statement>
           <p>Um <term>número complexo</term> é um elemento da forma
-	  <m>z=a+bi</m>, onde <m>i</m> é um elemento abstrato tal que
-	  <m>i^2=i\times i=-1</m>.</p>
+          <m>z=a+bi</m>, onde <m>a,b\in\R</m> e <m>i</m> é um elemento
+          abstrato tal que <m>i^2=i\times i=-1</m>.</p>
 	  <p>O conjunto de todos os números complexos é denotado por
 	  <m>\C</m>.</p>
       </statement>
     </definition></p>
 
-    <p pause="yes">Operações</p>
+    <p pause="yes">Por que e para que? É uma longa e bonita
+    história... Infelizmente não temos tempo para contá-la aqui.</p>
     
     <dl pause="yes">
-      <li><title>Caso de interesse: </title>
-      <p pause="yes"><m>n=2</m> ou <m>n=3</m>.</p></li>
-      <li><title>Como esboçar o traço: </title>
-      <p pause="yes">Usamos as ferramentas do cálculo e relações entre
-      as coordenadas.</p></li>
+      <li><title>Operações: </title>
+      <p pause="yes">Soma: <m>(a+bi)+(c+di):=(a+c)+(b+d)i</m> é
+      associativa, comutativa, tem elemento neutro e oposto.</p>
+      <p pause="yes">Produto: <m>(a+bi)\cdot(c+di):=(ac-bd)+(ad+bc)i</m> é
+      associativa, comutativa, tem elemento neutro e todo elemento,
+      exceto o neutro da soma, tem um inverso.</p>
+      <p pause="yes">Distributiva: <m>(z_1+z_2)z=z_1z+z_2z</m>.</p></li>
+      <p pause="yes">Em resumo dizemos que <m>\C</m> é um corpo.</p>
+      <p pause="yes">É um corpo não-ordenado, ou seja, não existe uma
+      relação de ordem em <m>\C</m> que seja compatível com operações
+      nele definidas.</p>
+      <li><title>Propriedades:</title>
+      <p pause="yes">É algebricamente fechado, ou seja, qualquer
+      polinômio com coeficientes em <m>\C</m> possui todas as suas raízes
+      em <m>\C</m>.</p></li>
     </dl>
   </slide>
 
   <slide>
-    <title>Curvas - Propriedades</title>   
+    <title>Números complexos - Aspectos Algébricos e Geométricos</title>
 
-    <p><definition xml:id="def-curvacont">
-      <statement>
-        <p>Uma curva <m>\gamma\colon I\subset\R\to\R^n</m> é
-        <term>contínua em <m>t_0\in I</m></term> se dado
-        <m>\epsilon>0</m>, existe <m>\delta>0</m> tal que
-        <m>|t-t_0|&lt;\delta\implies
-        \big\|\gamma(t)-\gamma(t_0)\big\|&lt;\epsilon</m>.</p>
-      </statement>
-    </definition></p>
-
-    <p pause="yes"><m>\gamma(t)=\big(x_1(t),\dots,x_n(t)\big)</m> é contínua em
-    <m>t_0</m> se e somente se cada <m>x_i(t)</m> é uma função contínua
-    em <m>t_0</m> (no sentido do cálculo 1).</p>
-
-    <p><definition xml:id="def-curvadif">
-      <statement>
-        <p>Uma curva <m>\gamma\colon I\subset\R\to\R^n</m> é
-        <term>derivável em <m>t_0\in I</m></term> se existe
-        <m>\gamma'(t_0)=\lim\limits_{t\to
-        t_0}\dfrac{\gamma(t)-\gamma(t_0)}{t-t_0}</m>.</p>
-	<p>O vetor <m>\gamma'(t_0)</m> é chamado <term>vetor
-	tangente</term> ou <term>vetor velocidade</term> de <m>\gamma</m> em
-	<m>t_0</m>.</p>
-      </statement>
-    </definition></p>
-
-    <p pause="yes"><m>\gamma(t)=\big(x_1(t),\dots,x_n(t)\big)</m> é derivável em
-    <m>t_0</m> se e somente se cada <m>x_i(t)</m> é uma função derivável
-    em <m>t_0</m> (no sentido do cálculo 1).</p>
-
-    <p pause="yes"><m>\gamma'(t_0)</m> "aponta a direção para onde anda a
-    curva".</p>
+    <dl pause="yes">
+      <li><title>Conjugação:</title>
+      <p>Se <m>z=a+ib</m>, o seu <term>conjugado</term> é
+      <m>\overline{z}=a-bi</m>.</p></li>
+      <li><title>Módulo:</title>
+      <p>Se <m>z=a+ib</m>, o seu <term>módulo</term> é
+      <m>|z|=\sqrt{z\overline{z}}=\sqrt{a^2+b^2}</m>.</p></li>
+      <li><title>Inversão:</title>
+      <p>Se <m>z=a+ib\neq 0</m>, o seu <term>inverso</term> é
+      <m>\dfrac{1}{z}=\dfrac{\overline{z}}{|z|^2}=\dfrac{a}{a^2+b^2}-\dfrac{b}{a^2+b^2}i</m>.</p></li>
+      <li><title>Representação Geométrica</title>
+      
+      <!-- <image xml:id="sage-complexograf" width="50%"> -->
+      <!-- 	<description>A cubic function on the interval -->
+      <!-- 	[-3,2]</description> -->
+      <!-- 	<sageplot> -->
+      <!-- 	  arrow((0,0),(3,2))+arrow((0,0),(3,-2)) -->
+      <!-- 	</sageplot> -->
+      <!-- 	<sageplot> -->
+      <!-- 	  arrow((0,0),(3,2))+arrow((0,0),(3,-2)) -->
+      <!-- 	</sageplot> -->
+      <!-- </image> -->
+      </li>
+    </dl>
   </slide>
   
   <slide>
-    <title>Curvas - Esboços</title>
+    <title>Equações Diferenciais Ordinárias - Definição e Exemplos</title>
 
+    <p><definition xml:id="def-edo">
+      <statement>
+          <p>Uma <term>equação diferencial ordinária (EDO)</term> é </p>
+      </statement>
+    </definition></p>
+    
     <dl pause="pause">
-      <li><title>No plano:</title>
+      <li><title>Exemplos:</title>
       <ol marker="i" pause="yes">
 	<li><p><m>\gamma(t)=(1-3t,2-t)</m>, <m>t\in\R</m>.</p></li>
 	<li><p><m>\gamma(t)=(\cos(t),-\sin t)</m>,
@@ -83,39 +89,40 @@
 	<li><p><m>\gamma(t)=(2+e^{-t},3+e^t)</m>, <m>t\in\R</m>.</p></li>
       </ol>
       </li>
-      <li><title>No espaço:</title>
-      <p>Mesma ideia, mas com uma coordenada a mais;</p>
-      <p>Conhecer algumas superfícies nos ajudará a entender melhor a
-      imagem dessas curvas. Já vemos isso!</p>
+      <li><title>Solução de uma EDO:</title>
+      <p>É uma função...</p>
       </li>
     </dl>
   </slide>
 
   <slide>
-    <title>Curvas - Parametrização</title>
+    <title>Equações Diferenciais Ordinárias - Existência e Unicidade de
+    Soluções</title>
 
-    <dl pause="yes">
-      <li><title>No plano:</title>
-      <p>Encontrar uma curva <m>\gamma\colon I\to\R^2</m>,
-      <m>\gamma(t)=\big(x(t),y(t)\big)</m>, cujo traço seja a trajetória
-      pedida.</p>
-      <p>Existem muitas parametrizações para uma mesma curva.</p></li>
-      <li><title>Exemplos:</title>
-      <p pause="yes"><m>C=\big\{(x,y)\in\R^2\colon
-      \frac{(x-3)^2}{4}+\frac{(x-2)^2}{9}=1\big\}</m>;</p>
-      <p pause="yes"><m>C=\big\{(x,y)\in\R^2\colon
-      y^2-x^2=1, y\leq 0\big\}</m>.</p></li>
-      <li><title>No espaço:</title>
-      <p>Agora procuramos <m>\gamma(t)=\big(x(t),y(t),z(t)\big)</m></p>
-      <p>Conhecer algumas superfícies onde a trajetoria está contida
-      pode ajudar.</p></li>
-      <li><title>Exemplos:</title>
-      <p pause="yes"><m>C=\big\{(x,y,z)\in\R^3\colon
-      x^2+y^2=1\text{ e } y+z=1\big\}</m>;</p>
-      <p pause="yes"><m>C=\big\{(x,y,z)\in\R^3\colon
-      x^2+y^2-z^2=1\text{ e } y+z=1\big\}</m>.</p>
-      </li>
-    </dl>
+    Teorema de Existência e Unicidade.
+
   </slide>
-  
+
+  <slide>
+    <title>Equações Diferenciais Ordinárias - Soluções I</title>
+
+    Equações de primeira ordem.
+  </slide>
+
+  <slide>
+    <title>Equações Diferenciais Ordinárias - Soluções II</title>
+
+    Equações homogêneas. Estrutura do espaço de soluções de uma
+    homomgênea.
+  </slide>
+
+  <slide>
+    <title>Equações Diferenciais Ordinárias - Soluções III</title>
+    Soluções das homogêneas de segunda ordem com coef. constantes
+  </slide>
+
+  <slide>
+    <title>Equações Diferenciais Ordinárias - Soluções IV</title>
+    Soluções das não-homogêneas de segunda ordem com coef. constantes
+  </slide>
 </section>
