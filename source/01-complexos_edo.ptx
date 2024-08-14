@@ -72,26 +72,34 @@
 
     <p><definition xml:id="def-edo">
       <statement>
-          <p>Uma <term>equação diferencial ordinária (EDO)</term> é </p>
+          <p>Uma <term>equação diferencial ordinária (EDO) de ordem
+          <m>n</m></term> é uma expressão do tipo
+          <me>F(y^{(n)}(x),y^{(n-1)}(x),\ldots,y'(x),y(x),x)=0,</me>
+          onde <m>F\colon\R^{n+2}\to\R</m> é uma função e
+          <m>y^{(k)}(x)</m> denota a <m>k</m>-ésima derivada de uma
+          função <m>y\colon\R\to\R</m>.</p>
+	  <p>Uma <term>solução</term> para uma EDO é uma função
+	  suficientemente derivável que satisfaz a equação acima.</p>
       </statement>
     </definition></p>
     
-    <dl pause="pause">
-      <li><title>Exemplos:</title>
-      <ol marker="i" pause="yes">
-	<li><p><m>\gamma(t)=(1-3t,2-t)</m>, <m>t\in\R</m>.</p></li>
-	<li><p><m>\gamma(t)=(\cos(t),-\sin t)</m>,
-	<m>t\in[0,2\pi]</m>.</p></li>
-	<li><p><m>\gamma(t)=(3\cos t,2\sin t)</m>, <m>t\in\R</m>.</p></li>
-	<li><p><m>\gamma(t)=(\cos^2 t,\sin t)</m>, <m>t\in\R</m>.</p></li>
-	<li><p><m>\gamma(t)=(e^t\cos t,e^t\sin t)</m>,
-	<m>t\in\R</m>.</p></li>
-	<li><p><m>\gamma(t)=(2+e^{-t},3+e^t)</m>, <m>t\in\R</m>.</p></li>
-      </ol>
+    <dl pause="yes">
+      <li><title>Modelagem:</title>
+      <ul pause="yes">
+      <li>Modelo simples de crescimento populacional: a taxa
+      de crescimento de uma população é diretamente proporcional ao
+      número de indivíduos nessa população em cada instante de tempo, ou
+      seja, <m>p'(t)=rp(t) \iff \dfrac{p'(t)}{p(t)}=r</m>.</li>
+      <li>Modelo mais realista: a taxa de crescimento
+      diminui quanto maior for o número de indivíduos na população e
+      estaciona quanto a população atinge um certo número <m>K</m> de
+      indivíduos, ou seja,
+      <m>\dfrac{p'(t)}{p(t)}=r\left(1-\dfrac{p(t)}{K}\right)</m>.</li>
+      </ul>
       </li>
-      <li><title>Solução de uma EDO:</title>
-      <p>É uma função...</p>
-      </li>
+      <li><p>O exemplos acima são de equações de primeira ordem, mas
+      existem modelos com equações de ordem mais alta, com coeficientes
+      variáveis, singularidades etc.</p></li>
     </dl>
   </slide>
 
@@ -99,30 +107,125 @@
     <title>Equações Diferenciais Ordinárias - Existência e Unicidade de
     Soluções</title>
 
-    Teorema de Existência e Unicidade.
+    <p><definition xml:id="def-pvi">
+      <statement>
+        <p>Uma <term>problema de valor inicial (PVI)</term> consiste de
+	uma EDO acompanhada de condições iniciais que devem ser
+	satisfeitas por uma solução da EDO.</p>
+      </statement>
+    </definition></p>
 
+    <p><theorem xml:id="teo-edo_eu">
+      <statement>
+	Seja <m>F(y^{(n)}(x),y^{(n-1)}(x),\ldots,y'(x),y(x),x)=0</m> uma
+	EDO de ordem <m>n</m>. Sob certas condições (sempre satisfeitas
+	aqui), dados <m>x_0\in\R</m> e
+	<m>\alpha_{n-1},\ldots,\alpha_0\in\R</m>, existem um intervalo
+	aberto maximal <m>I\subseteq\R</m>, com <m>x_0\in I</m>, e uma
+	única função <m>y\colon I\to\R</m> tais que <m>y(x)</m> é
+	solução da EDO e satisfaz
+	<m>y^{(n-1)}(x_0)=\alpha_{n-1},y^{(n-2)}(x_0)=\alpha_{n-2},
+	\ldots, y'(x_0)=\alpha_{1}</m> e <m>y(x_0)=\alpha_0</m>.
+	</statement></theorem></p>
+    
+    <dl pause="yes">
+      <li><title>Exemplos:</title>
+      <p pause="yes">
+      Primeira Ordem: <m>y'(x)=ky(x)</m>, <m>y(0)=a</m>;</p>
+      <p pause="yes">
+      Segunda Ordem: <m>y''(x)=\sin(x)</m>, <m>y(0)=3</m>,
+      <m>y'(0)=-2</m>;</p></li>
+    </dl>
   </slide>
 
   <slide>
     <title>Equações Diferenciais Ordinárias - Soluções I</title>
+    
+    <p>Vejamos um exemplo geral de solução de uma EDO linear de primeira
+    ordem:</p>
 
-    Equações de primeira ordem.
+    <p pause="yes"><m>y'(x)+p(x)y(x)=q(x)</m></p>
+
+    <p pause="yes">Usamos o método do fator integrante: multiplicar tudo
+    por alguma função, de modo que o lado esquerdo se pareça com a
+    derivada de um produto.</p>
+
+    <p pause="yes">Exemplo concreto: <m>y'(x)-\dfrac{2}{x}y(x)=0</m>.</p>
   </slide>
 
   <slide>
     <title>Equações Diferenciais Ordinárias - Soluções II</title>
 
-    Equações homogêneas. Estrutura do espaço de soluções de uma
-    homomgênea.
+    <p><definition xml:id="def-edoh">
+      <statement>
+          <p>Uma equação diferencial ordinária (EDO) de ordem <m>n</m> é
+          <term>homogênea e linear</term> se escreve-se na forma
+          <me>y^{(n)}(x)+p_{n-1}(x)y^{(n-1)}(x)+
+          \ldots+p_1(x)y'(x)+p_0(x)y(x)=0.</me></p>
+      </statement>
+    </definition></p>
+
+    <p><theorem xml:id="teo-edoh">
+      <statement>
+          <p>O conjunto de soluções de uma equação diferencial ordinária
+          de ordem <m>n</m>, linear e homogênea, é um subespaço vetorial
+          de dimensão <m>n</m> do espaço das funções sobre o intervalo
+          onde estão definidas as funções coeficiente.</p>
+      </statement>
+    </theorem></p>
   </slide>
 
   <slide>
     <title>Equações Diferenciais Ordinárias - Soluções III</title>
-    Soluções das homogêneas de segunda ordem com coef. constantes
+    <dl pause="yes">
+      <li><title>Caso especial:</title>
+      <p>Equações diferenciais homogêneas de segunda ordem, com
+      coeficientes constantes.</p></li>
+      <li><title>Forma da equação:</title>
+      <p><m>ay''(x)+by'(x)+cy(x)=0</m>, <m>a,b,c,\in\R</m>.</p></li>
+      <li><title>Protótipo de solução:</title> <p><m>y(x)=e^{\lambda
+      x}</m>, onde <m>\lambda</m> é raiz da equação
+      <m>ax^2+bx+c=0</m>.</p></li>
+      <li><title>Casos a considerar:</title>
+      <ul pause="yes">
+	<li>raízes reais distintas;</li>
+	<li>raiz real dupla;</li>
+	<li>raízes complexas.</li>
+      </ul></li>
+      <li><title>Exemplos:</title>
+      <p>Encontre todas as soluções de <m>y''(x)-ky(x)=0</m>, quando
+      <m>k&gt;0</m> e também quando <m>k&lt;0</m>.</p>
+      </li>
+      
+    </dl>
   </slide>
 
   <slide>
     <title>Equações Diferenciais Ordinárias - Soluções IV</title>
-    Soluções das não-homogêneas de segunda ordem com coef. constantes
+    
+    <p>O caso de equações não-homogêneas tem analogia com a teoria de
+    sistemas lineares não homogêneos: toda solução de uma EDO
+    não-homogênea é a soma de uma solução particular dela com qualquer
+    solução da EDO homogênea associada.</p>
+
+    <dl pause="yes">
+      <li><title>Como achar uma solução particular?</title>
+      <p>Depende do termo independente da equação!</p>
+      <ul pause="yes">
+	<li>Se for um polinômio de grau <m>k</m>, procure um polinômio
+	também de grau <m>n</m>;</li>
+	<li>Se for uma função exponencial, procure um múltiplo de uma
+	exponencial;</li>
+	<li>Se for uma função trigonométrica, procure uma função
+	trigonométrica.</li>
+	<li>Combinações lineares ou produtos dos casos acima.</li>
+	<li>Outras técnicas, vistas em cursos específicos (variação dos
+	parâmetros, por exemplos).</li>
+      </ul></li>
+      <li><title>Exemplo:</title>
+      <p>Determine todas as soluções da equação
+      <m>y''(x)-y(x)=e^{2t}</m>.</p>
+      </li>
+    </dl>
   </slide>
 </section>
