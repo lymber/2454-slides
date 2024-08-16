@@ -51,18 +51,16 @@
       <li><title>Inversão:</title>
       <p>Se <m>z=a+ib\neq 0</m>, o seu <term>inverso</term> é
       <m>\dfrac{1}{z}=\dfrac{\overline{z}}{|z|^2}=\dfrac{a}{a^2+b^2}-\dfrac{b}{a^2+b^2}i</m>.</p></li>
-      <li><title>Representação Geométrica</title>
-      
-      <!-- <image xml:id="sage-complexograf" width="50%"> -->
-      <!-- 	<description>A cubic function on the interval -->
-      <!-- 	[-3,2]</description> -->
-      <!-- 	<sageplot> -->
-      <!-- 	  arrow((0,0),(3,2))+arrow((0,0),(3,-2)) -->
-      <!-- 	</sageplot> -->
-      <!-- 	<sageplot> -->
-      <!-- 	  arrow((0,0),(3,2))+arrow((0,0),(3,-2)) -->
-      <!-- 	</sageplot> -->
-      <!-- </image> -->
+      <li><title>Representação Geométrica:</title>
+      <ul pause="yes">
+	<li>Coordenadas cartesianas:</li>
+	<li>Explicam bem a soma (como vetores do plano) e a conjugação
+	(reflexão no eixo <m>Ox</m>);</li>
+	<li>Coordenadas polares: representam um ponto do plano através
+	do ângulo com o eixo <m>Ox</m> e a distância até a origem.</li>
+	<li>Explicam bem a multiplicação, potenciação, divisão e
+	radiciação.</li>	
+      </ul>
       </li>
     </dl>
   </slide>
@@ -169,8 +167,9 @@
       <statement>
           <p>O conjunto de soluções de uma equação diferencial ordinária
           de ordem <m>n</m>, linear e homogênea, é um subespaço vetorial
-          de dimensão <m>n</m> do espaço das funções sobre o intervalo
-          onde estão definidas as funções coeficiente.</p>
+          de dimensão <m>n</m> do espaço vetorial (sobre <m>\C</m>) das
+          funções a valores reais definidas no intervalo que é o domínio
+	  das funções coeficiente da equação.</p>
       </statement>
     </theorem></p>
   </slide>
@@ -193,8 +192,9 @@
 	<li>raízes complexas.</li>
       </ul></li>
       <li><title>Exemplos:</title>
-      <p>Encontre todas as soluções de <m>y''(x)-ky(x)=0</m>, quando
-      <m>k&gt;0</m> e também quando <m>k&lt;0</m>.</p>
+      <p>Encontre todas as soluções de <m>y''(x)-k^2y(x)=0</m></p>
+      <p>Encontre todas as soluções de <m>y''(x)-2y'(x)+y(x)=0</m></p>
+      <p>Encontre todas as soluções de <m>y''(x)+k^2y(x)=0</m></p>
       </li>
       
     </dl>
@@ -220,7 +220,7 @@
 	trigonométrica.</li>
 	<li>Combinações lineares ou produtos dos casos acima.</li>
 	<li>Outras técnicas, vistas em cursos específicos (variação dos
-	parâmetros, por exemplos).</li>
+	parâmetros, por exemplo).</li>
       </ul></li>
       <li><title>Exemplo:</title>
       <p>Determine todas as soluções da equação
