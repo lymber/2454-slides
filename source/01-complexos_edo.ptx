@@ -213,7 +213,7 @@
       <p>Depende do termo independente da equação!</p>
       <ul pause="yes">
 	<li>Se for um polinômio de grau <m>k</m>, procure um polinômio
-	também de grau <m>n</m>;</li>
+	também de grau <m>k</m>;</li>
 	<li>Se for uma função exponencial, procure um múltiplo de uma
 	exponencial;</li>
 	<li>Se for uma função trigonométrica, procure uma função
