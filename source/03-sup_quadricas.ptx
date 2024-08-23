@@ -19,12 +19,12 @@
     <dl pause="yes">
       <li><title>Equações Reduzidas:</title>
       <p><m>ax^2+by^2+cz^2+k=0</m></p>
-      <p>Sempre existem um sistema de coordenadas onde a equação geral é
+      <p>Sempre existe um sistema de coordenadas onde a equação geral é
       descrita na forma reduzida.</p></li>
       <li><title>Exemplos:</title>
       <p pause="yes">Casos na forma reduzida <url
       href="https://www.ime.usp.br/~lymber/teaching/quadricas/">aqui</url>.</p></li>
-      <li><title>Esboço de curvas em <m>\R^3</m>:</title>
+      <li><title>Uso no esboço de curvas em <m>\R^3</m>:</title>
       <ol marker="i" pause="yes" cols="2">
         <li><p><m>\gamma(t)=(\cos t, \sin t,2)</m>, <m>t\in\R</m>.</p></li>
         <li><p><m>\gamma(t)=(\cos(t),\sin t, t)</m>,
