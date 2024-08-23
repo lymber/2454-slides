@@ -65,6 +65,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     <xi:include href="./01-complexos_edo.ptx" />
     <xi:include href="./02-curvas.ptx" />
     <xi:include href="./03-sup_quadricas.ptx" />
+    <xi:include href="./04-func_vv.ptx" />
     <!-- <xi:include href="./99-sample_stuff.ptx" /> -->
   </slideshow>
 </pretext>
