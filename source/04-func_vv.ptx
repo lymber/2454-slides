@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="funcoes">
+  <title>Funções de <m>\R^n</m> em <m>\R</m></title>
+
+  <slide>
+    <title>Funções de várias variáveis reais - Motivação e
+    Exemplos</title>
+
+    <p pause="yes">Vamos estudar grandezas que dependem de mais de uma
+    grandeza.</p>
+
+    <p pause="yes">Exemplo: numa chapa plana podemos medir, em cada
+    instante de tempo, a temperatura de um ponto de coordenadas
+    <m>(x,y)</m>. Ou seja, a cada tripla de números <m>(x,y,t)</m>
+    associamos o número real <m>T(x,y,t)</m>, o qual está <term>unicamente
+    determinado</term>.</p>
+
+    <p pause="yes">O <term>gráfico</term> de uma função
+    <m>f\colon A\subseteq\R^n\to\R</m> é o conjunto
+    <m>\text{Gr}(f)=\big\{(x_1,\ldots,x_{n+1})\in\R^{n+1}\colon
+    x_{n+1}=f(x_1,\ldots,x_n), (x_1,\ldots, x_n)\in A\big\}</m>.</p>
+
+    <p pause="yes">Só "enxergamos" gráficos quando <m>n=2</m>, que serão
+    um tipo especial de superfície.</p>
+
+    <p pause="yes">Se <m>n=3</m> o gráfico é um objeto em <m>\R^4</m>,
+    que tem bastante analogia com o caso anterior.</p>
+    
+    <dl pause="yes">
+      <li><title>Exemplos:</title>
+      <p><m>f\colon\R^2\to\R</m> dada por
+      <m>f(x,y)=\dfrac{x+y}{2+\cos(x)\sin(y)}</m>: <url
+      href="external/grafico.html">gráfico</url>. </p></li>
+      <li><p>Como no caso de cálculo 1, vamos construir ferramentas para
+      esboçar e entender melhor esse tipo de superfície.</p></li>
+      <li><p>Vamos também desenvolver o estudo de funções de <m>3</m>
+      variáveis para tratar uma classe mais ampla de objetos espaciais,
+      assim como fizemos de funções de uma variável para curvas no plano.</p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Funções de duas variáveis reais - Curvas de Nível</title>
+
+    <p><definition xml:id="def-curvaniv">
+      <statement>
+        <p>Seja <m>f\colon\R^2\to\R</m> uma função. A <term>curva de
+        nível <m>c\in\R</m> de <m>f</m></term> é o conjunto
+        <m>f^{-1}(c)=\{(x,y)\in A\colon f(x)=c\}</m>.</p>
+      </statement>
+    </definition></p>
+
+    <dl pause="yes">
+      <li><title>Exemplo:</title>
+      <p><m>f\colon\R^2\to\R</m> dada por
+      <m>f(x,y)=\dfrac{x+y}{2+\cos(x)\sin(y)}</m>:
+      <url href="external/curvas_nivel.html">gráfico com cortes</url>;
+      <url href="external/curvas_nivel-plano.html">curvas de nível</url>;</p> 
+      </li>
+      <li><title>Observações:</title>
+      <p pause="yes"><m>f^{-1}(c)</m> é a projeção no domínio de
+      <m>f</m> da interseção de seu gráfico com o plano <m>z=c</m>.</p>
+      <p pause="yes">Reforçando: a curva de nível está no domínio de
+      <m>f</m>.</p>
+      <p pause="yes">Se <m>c\not\in\im f</m>, então <m>f^{-1}(c)=\emptyset</m>.</p>
+      </li>
+      <li><title>Mais exemplos:</title>
+      <p><m>f\colon\R^2\to\R</m> dada por
+      <m>f(x,y)=x^2+y^2</m>:
+      <url href="external/curvas_nivel-paraboloide.html">gráfico com cortes</url>;
+      <url href="external/curvas_nivel-plano-paraboloide.html">curvas de
+      nível</url>;</p>
+      <p pause="yes"><m>f\colon\R^2\to\R</m> dada por <m>f(x,y)=y^2-x^2</m>:
+      <url href="external/curvas_nivel-parahip.html">gráfico com cortes</url>;
+      <url href="external/curvas_nivel-plano-parahip.html">curvas de
+      nível</url>;</p>
+      <p pause="yes"><m>f\colon A\subset\R^2\to\R</m> dada por
+      <m>f(x,y)=\dfrac{x^2}{x^2-y^2}</m>, onde
+      <m>A=\big\{(x,y)\in\R^2\colon x^2\neq y^2\big\}</m>: <url
+      href="external/curvas_nivel-dominio.html">gráfico com
+      cortes</url>; <url
+      href="external/curvas_nivel-plano-dominio.html">curvas de
+      nível</url>;</p>
+      </li>
+    </dl>
+  </slide>
+  
+  <!-- <slide> -->
+  <!--   <title>Curvas - Esboços</title> -->
+
+  <!--   <dl pause="pause"> -->
+  <!--     <li><title>No plano:</title> -->
+  <!--     <ol marker="i" pause="yes"> -->
+  <!-- 	<li><p><m>\gamma(t)=(1-3t,2-t)</m>, <m>t\in\R</m>.</p></li> -->
+  <!-- 	<li><p><m>\gamma(t)=(\cos(t),-\sin t)</m>, -->
+  <!-- 	<m>t\in[0,2\pi]</m>.</p></li> -->
+  <!-- 	<li><p><m>\gamma(t)=(3\cos t,2\sin t)</m>, <m>t\in\R</m>.</p></li> -->
+  <!-- 	<li><p><m>\gamma(t)=(\cos^2 t,\sin t)</m>, <m>t\in\R</m>.</p></li> -->
+  <!-- 	<li><p><m>\gamma(t)=(e^t\cos t,e^t\sin t)</m>, -->
+  <!-- 	<m>t\in\R</m>.</p></li> -->
+  <!-- 	<li><p><m>\gamma(t)=(2+e^{-t},3+e^t)</m>, <m>t\in\R</m>.</p></li> -->
+  <!--     </ol> -->
+  <!--     </li> -->
+  <!--     <li><title>No espaço:</title> -->
+  <!--     <p>Mesma ideia, mas com uma coordenada a mais;</p> -->
+  <!--     <p>Conhecer algumas superfícies nos ajudará a entender melhor a -->
+  <!--     imagem dessas curvas. Já vemos isso!</p> -->
+  <!--     </li> -->
+  <!--   </dl> -->
+  <!-- </slide> -->
+
+  <!-- <slide> -->
+  <!--   <title>Curvas - Parametrização</title> -->
+
+  <!--   <dl pause="yes"> -->
+  <!--     <li><title>No plano:</title> -->
+  <!--     <p>Encontrar uma curva <m>\gamma\colon I\to\R^2</m>, -->
+  <!--     <m>\gamma(t)=\big(x(t),y(t)\big)</m>, cujo traço seja a trajetória -->
+  <!--     pedida.</p> -->
+  <!--     <p>Existem muitas parametrizações para uma mesma curva.</p></li> -->
+  <!--     <li><title>Exemplos:</title> -->
+  <!--     <p pause="yes"><m>C=\big\{(x,y)\in\R^2\colon -->
+  <!--     \frac{(x-3)^2}{4}+\frac{(y-2)^2}{9}=1\big\}</m>;</p> -->
+  <!--     <p pause="yes"><m>C=\big\{(x,y)\in\R^2\colon -->
+  <!--     y^2-x^2=1, y\leq 0\big\}</m>.</p></li> -->
+  <!--     <li><title>No espaço:</title> -->
+  <!--     <p>Agora procuramos <m>\gamma(t)=\big(x(t),y(t),z(t)\big)</m></p> -->
+  <!--     <p>Conhecer algumas superfícies onde a trajetoria está contida -->
+  <!--     pode ajudar.</p></li> -->
+  <!--     <li><title>Exemplos:</title> -->
+  <!--     <p pause="yes"><m>C=\big\{(x,y,z)\in\R^3\colon -->
+  <!--     x^2+y^2=1\text{ e } y+z=1\big\}</m>;</p> -->
+  <!--     <p pause="yes"><m>C=\big\{(x,y,z)\in\R^3\colon -->
+  <!--     x^2+y^2-z^2=1\text{ e } y+z=1\big\}</m>.</p> -->
+  <!--     </li> -->
+  <!--   </dl> -->
+  <!-- </slide> -->
+  
+</section>
