@@ -10,17 +10,22 @@
       <statement>
           <p>Uma <term>curva parametrizada em <m>\R^n</m></term> é uma
           função <m>\gamma\colon I\subseteq\to\R^n</m>.</p>
-	  <p>O <term>traço de <m>\gamma</m></term> é a imagem de
-	  <m>\gamma</m>: <m>\im\gamma = \big\{\gamma(t)\in\R^n\colon t\in
+	  <p>O <term>traço de <m>\gamma</m></term> é a sua imagem como
+	  função: <m>\im\gamma = \big\{\gamma(t)\in\R^n\colon t\in
 	  I\big\}.</m></p>
       </statement>
     </definition></p>
     
     <dl pause="yes">
-      <li><title>Caso de interesse: </title>
-      <p pause="yes"><m>n=2</m> ou <m>n=3</m>.</p></li>
-      <li><title>Como esboçar o traço: </title>
-      <p pause="yes">Usamos as ferramentas do cálculo e relações entre
+      <li><title>O que ganhamos?</title>
+      <p>Quando <m>n=2</m>, generaliza o conceito de gráfico de uma
+      função <m>f\colon\R\to\R</m> para qualquer trajetória no plano.</p>
+      <p>Podemos descrever o movimento de partículas no espaço.</p>
+      <p>E movimentos em espaços de dimensões mais altas... Sim, isso é
+      útil!</p></li>
+      <li><title>Como esboçar o traço de uma curva: </title>
+      <p pause="yes">O domínio é um subconjunto de <m>\R</m>, então
+      usamos as ferramentas do Cálculo I e relações entre
       as coordenadas.</p></li>
     </dl>
   </slide>
@@ -63,10 +68,10 @@
   </slide>
   
   <slide>
-    <title>Curvas - Esboços</title>
+    <title>Curvas no Plano - Esboços</title>
 
     <dl pause="pause">
-      <li><title>No plano:</title>
+      <li><title>Exemplos:</title>
       <ol marker="i" pause="yes">
 	<li><p><m>\gamma(t)=(1-3t,2-t)</m>, <m>t\in\R</m>.</p></li>
 	<li><p><m>\gamma(t)=(\cos(t),-\sin t)</m>,
@@ -78,32 +83,45 @@
 	<li><p><m>\gamma(t)=(2+e^{-t},3+e^t)</m>, <m>t\in\R</m>.</p></li>
       </ol>
       </li>
-      <li><title>No espaço:</title>
-      <p>Mesma ideia, mas com uma coordenada a mais;</p>
-      <p>Conhecer algumas superfícies nos ajudará a entender melhor a
-      imagem dessas curvas. Já vemos isso!</p>
-      </li>
     </dl>
   </slide>
 
   <slide>
-    <title>Curvas - Parametrização</title>
+    <title>Curvas no Plano - Parametrização</title>
 
     <dl pause="yes">
-      <li><title>No plano:</title>
+      <li><title>Objetivo:</title>
       <p>Encontrar uma curva <m>\gamma\colon I\to\R^2</m>,
       <m>\gamma(t)=\big(x(t),y(t)\big)</m>, cujo traço seja a trajetória
       pedida.</p>
       <p>Existem muitas parametrizações para uma mesma curva.</p></li>
       <li><title>Exemplos:</title>
       <p pause="yes"><m>C=\big\{(x,y)\in\R^2\colon
-      \frac{(x-3)^2}{4}+\frac{(x-2)^2}{9}=1\big\}</m>;</p>
+      \frac{(x-3)^2}{4}+\frac{(y-2)^2}{9}=1\big\}</m>;</p>
       <p pause="yes"><m>C=\big\{(x,y)\in\R^2\colon
       y^2-x^2=1, y\leq 0\big\}</m>.</p></li>
-      <li><title>No espaço:</title>
-      <p>Agora procuramos <m>\gamma(t)=\big(x(t),y(t),z(t)\big)</m></p>
-      <p>Conhecer algumas superfícies onde a trajetoria está contida
-      pode ajudar.</p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Curvas no Espaço - Esboços e Parametrizações</title>
+
+    <dl pause="yes">
+      <li><title>Esboço:</title>
+      <p>Usamos as técnicas aplicadas às curvas planas, lembrando que
+      temos uma coordenada a mais.</p>
+      <p>Conhecer algumas superfícies que contém a imagem dessas curvas
+      ajuda a entendê-las melhor. (veja a seção de Superfícies Quádricas
+      a seguir)</p></li>
+      <li><title>Exemplos:</title>
+      <p pause="yes"><m>\gamma(t)=(\cos t, \sin t, 2), t\in\R</m>;</p>
+      <p pause="yes"><m>\gamma(t)=(\cos t, \sin t, t),t\in [0,2\pi]</m>;</p>
+      y<p pause="yes"><m>\gamma(t)=(\cos t, \cos t, \sqrt{2}\sin
+      t)</m>;</p></li>
+      <li><title>Parametrização:</title>
+      <p>Agora procuramos <m>\gamma(t)=\big(x(t),y(t),z(t)\big)</m> tal
+      que sua imagem seja o conjunto dado.</p>
+      <p>O conjunto pode ser dado pela inteseção de superfícies.</p></li>
       <li><title>Exemplos:</title>
       <p pause="yes"><m>C=\big\{(x,y,z)\in\R^3\colon
       x^2+y^2=1\text{ e } y+z=1\big\}</m>;</p>
