@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="lim_cont">
+  <title>Limite e Continuidade</title>
+
+  <slide>
+    <title>Limite - Motivação e Analogias</title>
+
+    <p pause="yes">Vamos agora estudar o comportamento das funções a várias
+    (duas) variáveis utilizando ideias semelhantes às do cálculo 1
+    (limites, alguma ideia de derivada, máximos e mínimos).</p>
+
+    <p pause="yes">As ideias são análogas, mas com contexto um pouco
+    diferente.</p> 
+
+    <p pause="yes">No cálculo 1, o conceito de limite estudava o que
+    acontecia com uma função quando a calculávamos em pontos
+    arbitrariamente próximos de um ponto <m>x_0</m> (que não precisa
+    estar no domínio da função).</p>
+
+    <p pause="yes">É <term>irrelevante</term> o que acontece com a
+    função no ponto <m>x_0</m>!</p>
+
+    <p pause="yes">Para imitar essa ideia precisamos observar que agora
+    o domínio é um subconjunto de <m>\R^2</m> e portanto o conceito de
+    proximidade deve usar a distância desse espaço.</p>
+
+    <p pause="yes">Por outro lado, o contra domínio é <m>\R</m>, logo o
+    conceito de proximidade aqui usa a distância entre pontos da real.</p>
+
+    <p pause="yes">Isso nos diz exatamente como estender a definição de
+    limite para o caso de interesse...</p>
+  </slide>
+
+  <slide>
+    <title>Limites - Definição e Como calcular I</title>
+
+    <p><definition xml:id="def-limite">
+      <statement>
+        <p>Sejam <m>f\colon A\subseteq\R^2\to\R</m> uma função e
+        <m>(x_0,y_0)</m> um <url
+        href="https://pt.wikipedia.org/wiki/Ponto_limite"><term>ponto de
+        acumulação</term></url> de <m>A</m>. A função <m>f</m> <term>tem
+	limite <m>L\in\R</m> em <m>(x_0,y_0)</m></term> se para todo
+	<m>\epsilon &gt;0</m>, existe <m>\delta &gt;0</m> tal que
+	<me>\|(x,y)-(x_0,y_0)\|&lt; \delta \implies |f(x,y)-L|&lt;
+	\epsilon.</me></p>
+	<p>Notação: <m>\lim\limits_{(x,y)\to(x_0,y_0)} f(x,y)=L</m>.</p>
+      </statement>
+    </definition></p>
+
+    <dl pause="yes">
+      <li><title>Observações:</title>
+      <p pause="yes">Note que, como antes, <m>f(x_0,y_0)</m> não aparece na
+      definição (por que?).</p>
+      <p pause="yes">Podemos escrever, nesse contexto, o que seriam
+      limites infinitos e limites no infinito (mas não vamos precisar
+      disso explicitamente).</p>
+      <p pause="yes">As propriedades operatórias (soma, produto e
+      quociente) aqui são as mesmas vistas para os limites estudados em
+      cálculo 1, exceto...</p>
+      <p pause="yes">A regra de L'Hospital! <m>\ddot\frown</m> (não
+      existe análogo para ela aqui)</p>
+      <p pause="yes">Exemplos: <m>\lim\limits_{(x,y)\to (x_0,y_0)} f(x)</m>,
+      <m>\lim\limits_{(x,y)\to (x_0,y_0)} g(y)</m>,
+      <m>\lim\limits_{(x,y)\to (x_0,y_0)} f(x)+g(y)</m>,
+      <m>\lim\limits_{(x,y)\to (x_0,y_0)} f(x)g(y)</m> etc.</p>
+      <p pause="yes">Composta? Confronto? Sim!</p>
+      </li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Limites - Definição e Como calcular II</title>
+
+    <p><theorem xml:id="teo-limcomp">
+      <statement>
+        <p>Sejam <m>f\colon A\subseteq\R^2\to\R</m> e <m>g\colon
+	I\subseteq\R\to\R</m> funções tais que
+	<m>\lim\limits_{(x,y)\to(x_0,y_0)} f(x,y)=L</m> e <m>g</m> é
+	contínua em <m>L</m>. Então <me>\lim\limits_{(x,y)\to(x_0,y_0)}
+	(g\circ f)(x,y)=g(L).</me> </p>
+      </statement>
+    </theorem></p>
+
+    <dl pause="yes">
+      <li><title>Exemplo:</title>
+      <p pause="yes"><m>\lim\limits_{(x,y)\to(0,0)}
+      \dfrac{\sin(x^2+y^2)}{x^2+y^2}</m>.</p></li>
+    </dl>
+
+    <p>Abaixo enunciamos o corolário do teorema do confronto que vamos
+    usar com frequência:</p>
+    
+    <p><theorem xml:id="teo-limconf">
+      <statement>
+        <p>Sejam <m>f,g\colon A\subseteq\R^2\to\R</m> funções tais que
+	<m>\lim\limits_{(x,y)\to(x_0,y_0)} f(x,y)=0</m> e <m>g</m> é
+	limitada. Então <me>\lim\limits_{(x,y)\to(x_0,y_0)}
+	f(x,y)g(x,y)=0.</me></p>
+      </statement>
+    </theorem></p>
+
+    <dl pause="yes">
+      <li><title>Exemplos:</title>
+      <ul pause="yes" cols="3">
+	<li><m>\lim\limits_{(x,y)\to(0,0)}
+	\dfrac{x^3}{x^2+y^2}</m>;</li>
+	<li><m>\lim\limits_{(x,y)\to(0,0)}
+	\dfrac{x^2}{\sqrt{x^2+y^2}}</m>;</li>
+	<li><m>\lim\limits_{(x,y)\to(0,0)}
+	\dfrac{x^2y}{x^2+y^2}</m>.</li>
+      </ul></li>
+    </dl>
+  </slide>
+
+  
+  <slide>
+    <title>Limites - Como ver que não existem?</title>
+
+    <p><theorem xml:id="teo-limcurvas">
+      <statement>
+        <p>Seja <m>f\colon A\subseteq\R^2\to\R</m> uma função tal que
+        <m>\lim\limits_{(x,y)\to(x_0,y_0)} f(x,y)=L</m>. Se
+        <m>\gamma\colon I\subset\R\to\R^2</m> é qualquer curva contínua
+        tal que <m>\lim\limits_{t\to t_0}\gamma(t)=(x_0,y_0)</m>, então
+        <m>\lim\limits_{t\to t_0} f\big(\gamma(t)\big)=L</m>.</p>
+      </statement>
+    </theorem></p>
+
+    <dl pause="yes">
+      <li><p>Como usamos isso para ver que limites não existem?</p></li>
+      <li><p>Na contrapositiva!</p></li>
+      <li><title>Exemplos:</title>
+      <ul pause="yes">
+	<li><m>\lim\limits_{(x,y)\to(0,0)}
+	\dfrac{x^2}{x^2+y^2}</m>;</li>
+	<li><m>\lim\limits_{(x,y)\to(0,0)}
+	\dfrac{xy}{\sqrt{x^2+y^2}}</m>;</li>
+      </ul></li>
+      <li><title>Outra técnica:</title>
+      <p>Curvas de nível, <m>\lim\limits_{(x,y)\to(0,0)}
+      \dfrac{xy}{x^3-y}</m>.</p>
+      </li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Continuidade - Agora é natural...</title>
+
+    <p><definition xml:id="def-continuidade">
+      <statement>
+	<p>Sejam <m>f\colon A\subseteq\R^2\to\R</m> uma função e
+	<m>(x_0,y_0)\in A</m>. A função <m>f</m> <term>é contínua em
+	<m>(x_0,y_0)</m></term> se para todo <m>\epsilon &gt;0</m>, existe
+	<m>\delta &gt;0</m> tal que <me>\|(x,y)-(x_0,y_0)\|\leq \delta
+	\implies |f(x,y)-f(x_0,y_0)|&lt; \epsilon.</me></p>
+      </statement>
+    </definition></p>
+
+    <dl pause="yes">
+      <li><title>Observações:</title>
+      <p pause="yes">Compare as noções de limite e continuidade.</p>
+      <p pause="yes">As propriedades operatórias (soma, produto e
+      quociente) aqui são as mesmas vistas para a continuidade vista em
+      cálculo 1.</p>
+      <p pause="yes">A composta que faz sentido entre funções contínuas
+      de uma e de várias (duas) variáveis também é contínua.</p>
+      </li>
+    </dl>
+
+    <p> Relação entre limite e continuidade:</p>
+
+    <p><theorem xml:id="teo-limcomp">
+      <statement>
+        <p>Sejam <m>f\colon A\subseteq\R^2\to\R</m> e <m>(x_0,y_0)\in
+	A</m>. Então <m>f</m> é continua em <m>(x_0,y_0)</m> se e
+	somente se <m>\lim\limits_{(x,y)\to(x_0,y_0)}
+	f(x,y)=f(x_0,y_0)</m>.</p>
+      </statement>
+    </theorem></p>
+
+    <dl pause="yes">
+      <li><title>Exemplo:</title>
+      <p>Determine <m>L\in\R</m> tal que a função
+      <m>f\colon\R^2\to\R</m>, dada por <m>f(x,y)=\begin{cases}
+      \dfrac{x^4}{x^4+y^2}\sin\Big(e^{\frac{-1}{x^2+y^2}}\Big),&amp;
+      (x,y)\neq (0,0)\\
+      \hfill L,&amp; (x,y)=(0,0)\end{cases}</m> é contínua.</p>
+      </li>
+    </dl>
+  </slide>
+
+  
+</section>
