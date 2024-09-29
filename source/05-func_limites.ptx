@@ -73,35 +73,32 @@
   <slide>
     <title>Limites - Definição e Como calcular II</title>
 
-    <p><theorem xml:id="teo-limcomp">
-      <statement>
-        <p>Sejam <m>f\colon A\subseteq\R^2\to\R</m> e <m>g\colon
-	I\subseteq\R\to\R</m> funções tais que
-	<m>\lim\limits_{(x,y)\to(x_0,y_0)} f(x,y)=L</m> e <m>g</m> é
-	contínua em <m>L</m>. Então <me>\lim\limits_{(x,y)\to(x_0,y_0)}
-	(g\circ f)(x,y)=g(L).</me> </p>
-      </statement>
-    </theorem></p>
-
     <dl pause="yes">
+      <li><theorem xml:id="teo-limcomp">
+	<statement>
+          <p>Sejam <m>f\colon A\subseteq\R^2\to\R</m> e <m>g\colon
+	  I\subseteq\R\to\R</m> funções tais que
+	  <m>\lim\limits_{(x,y)\to(x_0,y_0)} f(x,y)=L</m> e <m>g</m> é
+	  contínua em <m>L</m>. Então <me>\lim\limits_{(x,y)\to(x_0,y_0)}
+	  (g\circ f)(x,y)=g(L).</me> </p>
+	</statement>
+      </theorem></li>
+
       <li><title>Exemplo:</title>
-      <p pause="yes"><m>\lim\limits_{(x,y)\to(0,0)}
+      <p><m>\lim\limits_{(x,y)\to(0,0)}
       \dfrac{\sin(x^2+y^2)}{x^2+y^2}</m>.</p></li>
-    </dl>
-
-    <p>Abaixo enunciamos o corolário do teorema do confronto que vamos
-    usar com frequência:</p>
+      <li><p>Abaixo enunciamos o corolário do teorema do confronto que vamos
+      usar com frequência:</p></li>
     
-    <p><theorem xml:id="teo-limconf">
-      <statement>
-        <p>Sejam <m>f,g\colon A\subseteq\R^2\to\R</m> funções tais que
-	<m>\lim\limits_{(x,y)\to(x_0,y_0)} f(x,y)=0</m> e <m>g</m> é
-	limitada. Então <me>\lim\limits_{(x,y)\to(x_0,y_0)}
-	f(x,y)g(x,y)=0.</me></p>
-      </statement>
-    </theorem></p>
+      <li><theorem xml:id="teo-limconf">
+	<statement>
+          <p>Sejam <m>f,g\colon A\subseteq\R^2\to\R</m> funções tais que
+	  <m>\lim\limits_{(x,y)\to(x_0,y_0)} f(x,y)=0</m> e <m>g</m> é
+	  limitada. Então <me>\lim\limits_{(x,y)\to(x_0,y_0)}
+	  f(x,y)g(x,y)=0.</me></p>
+	</statement>
+      </theorem></li>
 
-    <dl pause="yes">
       <li><title>Exemplos:</title>
       <ul pause="yes" cols="3">
 	<li><m>\lim\limits_{(x,y)\to(0,0)}
@@ -167,20 +164,15 @@
       <p pause="yes">A composta que faz sentido entre funções contínuas
       de uma e de várias (duas) variáveis também é contínua.</p>
       </li>
-    </dl>
-
-    <p> Relação entre limite e continuidade:</p>
-
-    <p><theorem xml:id="teo-limcomp">
+      <li><p> Relação entre limite e continuidade:</p></li>
+      <li><theorem xml:id="teo-limcont">
       <statement>
         <p>Sejam <m>f\colon A\subseteq\R^2\to\R</m> e <m>(x_0,y_0)\in
 	A</m>. Então <m>f</m> é continua em <m>(x_0,y_0)</m> se e
 	somente se <m>\lim\limits_{(x,y)\to(x_0,y_0)}
 	f(x,y)=f(x_0,y_0)</m>.</p>
       </statement>
-    </theorem></p>
-
-    <dl pause="yes">
+      </theorem></li>
       <li><title>Exemplo:</title>
       <p>Determine <m>L\in\R</m> tal que a função
       <m>f\colon\R^2\to\R</m>, dada por <m>f(x,y)=\begin{cases}
