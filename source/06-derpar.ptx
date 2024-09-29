@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="derpar">
+  <title>Derivadas Parciais</title>
+
+  <slide>
+    <title>Derivadas Parciais - Motivação e Definição</title>
+
+    <dl pause="yes">
+      <li><p>Agora começamos a estudar aspectos relativos à derivação
+      de funções a várias variáveis reais.</p></li>
+      <li><p>Antes, vamos fixar algumas nomenclaturas para conjuntos
+      em <m>\R^n</m>, as quais serão úteis ao longo de todo o curso:
+      <ul pause="yes">
+	<li>Bola aberta, de raio <m>r&gt;0</m> e centrada em <m>x_0</m>:
+	<m>B_r(x_0)=\big\{x\in\R^n\colon \|x-x_0\|&lt;r\big\}</m>;</li>
+	<li>Conjunto aberto: <m>A\subseteq\R^n</m> é <term>aberto</term>
+	se para todo <m>x_0\in A</m>, existe <m>r&gt;0</m> tal que
+	<m>B_r(x_0)\subset A</m>;</li>
+	<li>Conjunto fechado: <m>A\subset\R^n</m> é <term>fechado</term>
+	se seu complementar, <m>\R^n\setminus A</m> é um conjunto
+	aberto;</li>
+	<li>Conjunto limitado: <m>A\subseteq\R^n</m> é
+	<term>limitado</term> se existe <m>R&gt;0</m> tal que
+	<m>A\subseteq B_R(\nv)</m>;</li>
+	<li>Conjunto compacto: <m>A\subseteq\R^n</m> é
+	<term>compacto</term> se for simultaneamente limitado e
+	fechado.</li>
+      </ul>
+      </p></li>
+      <li><p>A ideia é medir taxas de variação da função, mas agora
+      temos muitas oções de caminhos para ligar os pontos entre os
+      quais estamos medindo essa variação.</p></li>
+      <li><p>Começamos com as mais simples, ou seja, as direções
+      paralelas aos eixos:</p></li>
+      <li><definition xml:id="def-derpar">
+      <statement>
+        <p>Sejam <m>f\colon A\subseteq\R^2\to\R</m> uma função no
+        aberto <m>A</m> e <m>(x_0,y_0)\in A</m>. As <term>derivadas
+        parciais</term> de <m>f</m> no ponto <m>(x_0,y_0)</m> são
+        <me>\dfrac{\partial f}{\partial x}(x_0,y_0)=\lim\limits_{h\to
+        0}\dfrac{f(x_0+h,y_0)-f(x_0,y_0)}{h}\quad\text{e}\quad\dfrac{\partial
+        f}{\partial y}(x_0,y_0)=\lim\limits_{k\to
+        0}\dfrac{f(x_0,y_0+k)-f(x_0,y_0)}{k}.</me></p>
+	<p>Notação alternativa: <m>f_x(x_0,y_0)</m> e
+	<m>f_y(x_0,y_0)</m>, respectivamente.</p>
+      </statement>
+    </definition></li>
+    <li><title>Exemplos:</title>
+    <ul pause="yes" cols="2">
+      <li><m>f(x,y)=3x^2\cos(xy)+y^2\sin(x)-5</m>;</li>
+      <li><m>f(x,y)=\begin{cases}
+      \dfrac{xy}{x^2+y^2},&amp;\text{ se }(x,y)\neq (0,0)\\
+      \hfill 0,&amp;\text{ se }(x,y)=(0,0)
+      \end{cases}</m>.</li>
+    </ul></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Derivadas Parciais - Interpretação geométrica e derivadas
+    de ordem superior</title>
+
+    <dl pause="yes">
+      <li><title>Interpretação das derivadas parciais:</title>
+      <p pause="yes">Vamos para o quadro!</p>
+      </li>
+      <li><title>Quero derivar de novo! Posso?</title>
+      <p pause="yes">Talvez... Vamos olhar isso com cuidado.</p>
+      <p pause="yes">Podemos considerar a função <m>f_x\colon B\subseteq
+      A\subseteq\R^2</m> e verifica se ela admite as derivadas
+      parciais. O mesmo valendo para a função <m>f_y</m>. Com isso temos a:</p></li>
+      <li><definition xml:id="def-derparsup">
+      <statement>
+        <p>Sejam <m>f\colon A\subseteq\R^2\to\R</m> uma função que
+        admite derivadas parciais no em todos os pontos do conjunto
+        <m>A</m>. Definimos as <term>derivadas parciais de segunda
+        ordem de <m>f</m></term> por
+	<md>
+	  <mrow>\frac{\partial^2 f}{\partial
+	  x^2}(x_0,y_0)=\dfrac{\partial}{\partial
+	  x}\Big(\dfrac{\partial f}{\partial x}\Big)(x_0,y_0)&amp;;\quad
+	  \frac{\partial^2 f}{\partial y\partial 
+	  x}(x_0,y_0)=\dfrac{\partial}{\partial
+	  y}\Big(\dfrac{\partial f}{\partial x}\Big)(x_0,y_0);</mrow>
+	  <mrow>\frac{\partial^2 f}{\partial
+	  x\partial y}(x_0,y_0)=\dfrac{\partial}{\partial
+	  x}\Big(\dfrac{\partial f}{\partial y}\Big)(x_0,y_0)&amp;;\quad
+	  \frac{\partial^2 f}{\partial y^2}(x_0,y_0)=\dfrac{\partial}{\partial
+	  y}\Big(\dfrac{\partial f}{\partial y}\Big)(x_0,y_0);</mrow>
+	</md></p>
+	<p>Notações alternativas: <m>f_{xx}(x_0,y_0)</m>,
+	<m>f_{xy}(x_0,y_0)</m>, <m>f_{yx}(x_0,y_0)</m> e
+	<m>f_{yy}(x_0,y_0)</m>, respectivamente.</p>
+      </statement>
+      </definition></li>
+      <li><title>Escrevendo as definições acima por extenso:</title>
+      <ul pause="yes" cols="2">
+	<li><m>\dfrac{\partial^2 f}{\partial
+	x^2}(x_0,y_0)=\lim\limits_{h\to
+	0}\dfrac{f_x(x_0+h,y_0)-f_x(x_0,y_0)}{h}</m>;</li>
+	<li><m>\dfrac{\partial^2 f}{\partial y
+	\partial x}(x_0,y_0)=\lim\limits_{k\to
+	0}\dfrac{f_x(x_0,y_0+k)-f_x(x_0,y_0)}{k}</m>;</li>
+	<li><m>\dfrac{\partial^2 f}{\partial x
+	\partial y}(x_0,y_0)=\lim\limits_{h\to
+	0}\dfrac{f_y(x_0+h,y_0)-f_y(x_0,y_0)}{h}</m>;</li>
+	<li><m>\dfrac{\partial^2 f}{\partial
+	y^2}(x_0,y_0)=\lim\limits_{k\to
+	0}\dfrac{f_y(x_0,y_0+k)-f_y(x_0,y_0)}{k}</m>;</li>
+      </ul></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Derivadas de ordem superior - Interpretação, Exemplos e um resultado</title>
+
+    <dl pause="yes">
+      <li><title>Interpretação geométrica das derivadas segundas:</title>
+      <p>Vamos para o quadro!</p></li>
+      <li><title>Exemplos:</title>
+      <ul pause="yes">
+	<li><m>f(x,y)=4x^5y^4-6x^2y+3</m>;</li>
+	<li><m>f(x,y)=\begin{cases}
+	\dfrac{xy^3}{x^2+y^2},&amp;\text{ se }(x,y)\neq (0,0)\\
+	\hfill 0,&amp;\text{ se }(x,y)=(0,0)
+	\end{cases}</m>.</li>
+      </ul></li>
+      <li><definition xml:id="def-classeck">
+	<statement>
+          <p>Seja <m>f\colon A\subseteq\R^2\to\R</m>. Dizemos que
+          <term><m>f</m> é de classe <m>\mathcal{C}^k</m> em
+          <m>(x_0,y_0)</m></term> se todas as derivadas parciais de
+          <m>f</m> até ordem <m>k</m> são contínuas em
+          <m>(x_0,y_0)</m>.</p>
+	  <p>Notação: <m>f\in\mathcal{C}^k(x_0,y_0)</m>.</p>
+	</statement>
+      </definition></li>
+
+      <li><theorem xml:id="teo-schwarz">
+	<statement>
+          <p>Seja <m>f\in\mathcal{C}^2(x_0,y_0)</m>. Então
+          <m>f_{xy}(x_0,y_0)=f_{yx}(x_0,y_0)</m>.</p>
+	</statement>
+      </theorem></li>	  
+    </dl>
+  </slide>
+  
+</section>
