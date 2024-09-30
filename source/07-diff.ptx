@@ -124,39 +124,5 @@
       <li><p>Vejamos isso em casa exemplo acima.</p></li>
     </dl>
   </slide>
-
-  <!-- <slide> -->
-  <!--   <title>Derivadas de ordem superior - Interpretação, Exemplos e um resultado</title> -->
-
-  <!--   <dl pause="yes"> -->
-  <!--     <li><title>Interpretação geométrica das derivadas segundas:</title> -->
-  <!--     <p>Vamos para o quadro!</p></li> -->
-  <!--     <li><title>Exemplos:</title> -->
-  <!--     <ul pause="yes"> -->
-  <!-- 	<li><m>f(x,y)=4x^5y^4-6x^2y+3</m>;</li> -->
-  <!-- 	<li><m>f(x,y)=\begin{cases} -->
-  <!-- 	\dfrac{xy^3}{x^2+y^2},&amp;\text{ se }(x,y)\neq (0,0)\\ -->
-  <!-- 	\hfill 0,&amp;\text{ se }(x,y)=(0,0) -->
-  <!-- 	\end{cases}</m>.</li> -->
-  <!--     </ul></li> -->
-  <!--     <li><definition xml:id="def-classeck"> -->
-  <!-- 	<statement> -->
-  <!--         <p>Seja <m>f\colon A\subseteq\R^2\to\R</m>. Dizemos que -->
-  <!--         <term><m>f</m> é de classe <m>\mathcal{C}^k</m> em -->
-  <!--         <m>(x_0,y_0)</m></term> se todas as derivadas parciais de -->
-  <!--         <m>f</m> até ordem <m>k</m> são contínuas em -->
-  <!--         <m>(x_0,y_0)</m>.</p> -->
-  <!-- 	  <p>Notação: <m>f\in\mathcal{C}^k(x_0,y_0)</m>.</p> -->
-  <!-- 	</statement> -->
-  <!--     </definition></li> -->
-
-  <!--     <li><theorem xml:id="teo-schwarz"> -->
-  <!-- 	<statement> -->
-  <!--         <p>Seja <m>f\in\mathcal{C}^2(x_0,y_0)</m>. Então -->
-  <!--         <m>f_{xy}(x_0,y_0)=f_{yx}(x_0,y_0)</m>.</p> -->
-  <!-- 	</statement> -->
-  <!--     </theorem></li>	   -->
-  <!--   </dl> -->
-  <!-- </slide> -->
   
 </section>
