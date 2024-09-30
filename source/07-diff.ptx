@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="diff">
+  <title>Diferenciabilidade</title>
+
+  <slide>
+    <title>Diferenciabilidade - Motivações</title>
+
+    <dl pause="yes">
+      <li><p>Vimos que a existência de derivadas parciais não garante
+      sequer a continuidade da função.</p></li>
+      <li><p>Precisamos de um conceito que garante isso e que permita
+      definir para uma função <m>f\colon\R^n\to\R</m> o que seria o
+      análogo à reta tangente a uma função
+      <m>f\colon\R\to\R</m>.</p></li>
+      <li><p>Para isso vamos reconstruir o conceito de derivabilidade
+      do Cálculo 1 de maneira que ele possa generalizado para funções
+      de várias variáveis.</p></li>
+      <li><p><m>f´(x_0)=\lim\limits_{h\to
+      0}\dfrac{f(x_0+h)-f(x_0)}{0}\iff \lim\limits_{h\to
+      0}\dfrac{f(x_0+h)-f(x_0)-f´(x_0)h}{h}=0</m>.</p></li>
+      <li><p>Notando que <m>L_{x_0}(h)=f'(x_0)h</m> é um operador
+      linear em <m>\R</m>, podemos dizer que <m>f</m> é derivável em
+      <m>x_0</m> se, e somente se existe <m>L_{x_0}\in L(\R)</m>, tal
+      que vale a última igualdade no limite acima. </p></li>
+      <li><p>Todo operador linear em <m>\R</m> é da forma
+      <m>T(h)=ah</m>, com <m>a=T(1)\in\R</m>. Já mostramos, e você
+      deve conferir isso, que o único valor de <m>a\in\R</m> tal que o
+      limite acima se anula é <m>a=f'(x_0)</m>.</p></li>
+      <li><p>Nesse contexto, fazendo <m>h=x-x_0</m>, a reta
+      <m>y=f(x_0)+L_{x_0}(x-x_0)</m> é a reta tangente ao gráfico de
+      <m>f</m> no ponto <m>\big(x_0,f(x_0)\big)</m>.</p></li>
+      <li><p>Tentando generalizar para uma <m>f\colon
+      A\subseteq\R^2\to\R</m> procurando uma tranformação linear
+      <m>L_{(x_0,y_0)}\in L(\R^2,\R)</m> tal que
+      <me>\lim\limits_{(h,k)\to
+      (0,0)}\dfrac{f(x_0+h,y_0+k)-f(x_0,y_0)-L_{(x_0,y_0)}(h,k)}
+      {\|(h,k)\|}=0.</me></p></li>
+      <li><p>Sabemos da álgebra linear que
+      <m>L_{(x_0,y_0)}(h,k)=ah+bk</m> para certos
+      <m>a,b\in\R</m>. Podemos usar o último limite acima para
+      determiná-los, calculando o sobre as retas paralelas aos eixos
+      passando por <m>(x_0,y_0)</m>, obtendo
+      <me>a=f_x(x_0,y_0)\qquad\text{e}\qquad
+      b=f_y(x_0,y_0)</me>.</p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Diferenciabilidade - Definição, exemplos e um primeiro resultado</title>
+
+    <p>Tudo pronto para a:</p>
+
+    <dl pause="yes">
+      <li><definition
+      xml:id="def-diff">
+      <statement>
+        <p>Sejam <m>f\colon A\subseteq\R^2\to\R</m> uma função no
+        aberto <m>A</m> e <m>(x_0,y_0)\in A</m>. Dizemos que
+        <term><m>f</m> é diferenciável em <m>(x_0,y_0)</m></term> se
+        <me>\lim\limits_{(h,k)\to
+        (0,0)}\dfrac{f(x_0+h,y_0+k)-f(x_0,y_0)-f_x(x_0,y_0)h-f_y(x_0,y_0)k}
+        {\sqrt{h^2+k^2}}=0.</me>
+	</p>
+      </statement>
+      </definition></li>
+      <li><theorem xml:id="teo-diffcont">
+	<statement>
+	  <p>Se <m>f</m> é diferenciável em <m>(x_0,y_0)</m>, então
+	  <m>f</m> é contínua em <m>(x_0,y_0)</m>.</p>
+	</statement>
+      </theorem></li>
+      <li><title>Exemplos:</title>
+      <ul pause="yes" cols="2">
+	<li><m>f(x,y)=\begin{cases} \dfrac{xy}{x^2+y^2},&amp;\text{ se
+	}(x,y)\neq (0,0)\\ \hfill 0,&amp;\text{ se }(x,y)=(0,0)
+	\end{cases}</m>;</li>
+	<li><m>f(x,y)=\begin{cases} \dfrac{x^3}{x^2+y^2},&amp;\text{ se
+	}(x,y)\neq (0,0)\\ \hfill 0,&amp;\text{ se }(x,y)=(0,0)
+	\end{cases}</m>;</li>
+	<li><m>f(x,y)=\begin{cases} \dfrac{x^2y^2}{x^2+y^2},&amp;\text{ se
+	}(x,y)\neq (0,0)\\ \hfill 0,&amp;\text{ se }(x,y)=(0,0)
+	\end{cases}</m>.</li>
+    </ul></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Diferenciabilidade - Um resultado útil e o plano tangente</title>
+
+    <p>Sempre temos que usar o "limitão"?</p>
+    
+    <dl pause="yes">
+      <li><theorem xml:id="teo-diffc1">
+      <statement>
+        <p>Se <m>f\in\mathcal{C}^1(x_0,y_0)</m>, então <m>f</m> é
+        diferenciável em <m>(x_0,y_0)</m>.</p>
+      </statement>
+      </theorem></li>
+      <li><title>Exemplos:</title>
+      <ul pause="yes">
+	<li><m>f(x,y)=x^2\cos(xy)-\ln(1+x^2)y+7</m>;</li>
+	<li><m>f(x,y)=\begin{cases} \dfrac{x^3}{x^2+y^2},&amp;\text{ se
+	}(x,y)\neq (0,0)\\ \hfill 0,&amp;\text{ se }(x,y)=(0,0)
+	\end{cases}</m>;</li>
+	<li><m>f(x,y)=\begin{cases}
+	(x^2+y^2)\sin\Big(\dfrac{1}{x^2+y^2}\Big),&amp;\text{ se
+	}(x,y)\neq (0,0)\\
+	\hfill 0,&amp;\text{ se }(x,y)=(0,0)
+	\end{cases}</m>.</li>
+      </ul></li>
+      <li><definition xml:id="def-planotg">
+	<statement>
+	  <p>Se <m>f</m> é diferenciável em <m>(x_0,y_0)</m>, o
+	  <term>plano tangente ao gráfico de <m>f</m> em
+	  <m>\big(x_0,y_0,f(x_0,y_0)\big)</m></term> é aquele de
+	  equação <me>\pi\colon
+	  f_x(x_0,y_0)(x-x_0)+f_y(x_0,y_0)(y-y_0)-z=0.</me></p>
+	  <p>O <term>vetor normal ao gráfico de <m>f</m> em
+	  <m>\big(x_0,y_0,f(x_0,y_0)\big)</m></term> é
+	  <m>n_f(x_0,y_0)=\big(f_x(x_0,y_0),f_y(x_0,y_0), -1\big)</m>.</p>
+	</statement>
+      </definition></li>
+      <li><p>Vejamos isso em casa exemplo acima.</p></li>
+    </dl>
+  </slide>
+
+  <!-- <slide> -->
+  <!--   <title>Derivadas de ordem superior - Interpretação, Exemplos e um resultado</title> -->
+
+  <!--   <dl pause="yes"> -->
+  <!--     <li><title>Interpretação geométrica das derivadas segundas:</title> -->
+  <!--     <p>Vamos para o quadro!</p></li> -->
+  <!--     <li><title>Exemplos:</title> -->
+  <!--     <ul pause="yes"> -->
+  <!-- 	<li><m>f(x,y)=4x^5y^4-6x^2y+3</m>;</li> -->
+  <!-- 	<li><m>f(x,y)=\begin{cases} -->
+  <!-- 	\dfrac{xy^3}{x^2+y^2},&amp;\text{ se }(x,y)\neq (0,0)\\ -->
+  <!-- 	\hfill 0,&amp;\text{ se }(x,y)=(0,0) -->
+  <!-- 	\end{cases}</m>.</li> -->
+  <!--     </ul></li> -->
+  <!--     <li><definition xml:id="def-classeck"> -->
+  <!-- 	<statement> -->
+  <!--         <p>Seja <m>f\colon A\subseteq\R^2\to\R</m>. Dizemos que -->
+  <!--         <term><m>f</m> é de classe <m>\mathcal{C}^k</m> em -->
+  <!--         <m>(x_0,y_0)</m></term> se todas as derivadas parciais de -->
+  <!--         <m>f</m> até ordem <m>k</m> são contínuas em -->
+  <!--         <m>(x_0,y_0)</m>.</p> -->
+  <!-- 	  <p>Notação: <m>f\in\mathcal{C}^k(x_0,y_0)</m>.</p> -->
+  <!-- 	</statement> -->
+  <!--     </definition></li> -->
+
+  <!--     <li><theorem xml:id="teo-schwarz"> -->
+  <!-- 	<statement> -->
+  <!--         <p>Seja <m>f\in\mathcal{C}^2(x_0,y_0)</m>. Então -->
+  <!--         <m>f_{xy}(x_0,y_0)=f_{yx}(x_0,y_0)</m>.</p> -->
+  <!-- 	</statement> -->
+  <!--     </theorem></li>	   -->
+  <!--   </dl> -->
+  <!-- </slide> -->
+  
+</section>
