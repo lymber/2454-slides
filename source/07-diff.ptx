@@ -16,9 +16,9 @@
       <li><p>Para isso vamos reconstruir o conceito de derivabilidade
       do Cálculo 1 de maneira que ele possa generalizado para funções
       de várias variáveis.</p></li>
-      <li><p><m>f´(x_0)=\lim\limits_{h\to
-      0}\dfrac{f(x_0+h)-f(x_0)}{0}\iff \lim\limits_{h\to
-      0}\dfrac{f(x_0+h)-f(x_0)-f´(x_0)h}{h}=0</m>.</p></li>
+      <li><p><m>f'(x_0)=\lim\limits_{h\to
+      0}\dfrac{f(x_0+h)-f(x_0)}{h}\iff \lim\limits_{h\to
+      0}\dfrac{f(x_0+h)-f(x_0)-f'(x_0)h}{h}=0</m>.</p></li>
       <li><p>Notando que <m>L_{x_0}(h)=f'(x_0)h</m> é um operador
       linear em <m>\R</m>, podemos dizer que <m>f</m> é derivável em
       <m>x_0</m> se, e somente se existe <m>L_{x_0}\in L(\R)</m>, tal
