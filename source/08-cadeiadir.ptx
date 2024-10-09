@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="cadeia_dir">
+  <title>Regra da Cadeia e Derivadas Direcionais</title>
+
+  <slide>
+    <title>Regra da Cadeia - Motivações</title>
+
+    <dl pause="yes">
+      <li><p>Queremos derivar compostas de funções... Mas quais
+      compostas fazem sentido no nosso contexto atual?</p></li>
+      <li><p>Para começar vamos compor funções de duas (<m>n</m>)
+      variáveis com curvas em <m>\R^2</m> (em <m>\R^n</m>)!</p></li>
+      <li><title>Exemplos:</title>
+      <p pause="yes"><m>f(x,y)=x^2y</m> e <m>\gamma(t)=(\sin t,\cos t)</m>
+      em <m>t_0=\dfrac{\pi}{4}</m>;</p>
+      <p pause="yes"><m>f(x,y)=\begin{cases} \dfrac{x^3}{x^2+y^2},&amp;\text{ se
+	}(x,y)\neq (0,0)\\ \hfill 0,&amp;\text{ se }(x,y)=(0,0)
+	\end{cases}</m> e <m>\gamma(t)=(t,t)</m> em <m>t_0=0</m>.</p>
+      </li>
+      <li><p>Vamos tentar copiar a ideia da regra da cadeia do cálculo 1.
+      Para introduzimos a:</p></li>
+      <li><definition
+      xml:id="def-grad">
+      <statement>
+        <p>Sejam <m>f\colon A\subseteq\R^2\to\R</m> uma função no
+        aberto <m>A</m> e <m>(x_0,y_0)\in A</m> tais que
+        <m>f_x(x_0,y_0)</m> e <m>f_y(x_0,y_0)</m> existam. O
+        <term>gradiente de <m>f</m> em <m>(x_0,y_0)</m></term> é o
+        vetor <me>\nabla
+        f(x_0,y_0)=\big(f_x(x_0,y_0),f_y(x_0,y_0)\big)</me>.
+	</p>
+      </statement>
+      </definition></li>
+      <li><p>Se <m>f\circ\gamma\colon\R\to\R</m> for derivável, tem
+      como derivada em cada ponto um número real, mas as "derivadas"
+      que termos para <m>f</m> e <m>\gamma</m> são vetores.</p></li>
+      <li><p>Se quisermos a derivada da composta como um "produto" de
+      derivadas, a única opção é o produto escalar entre <m>\nabla
+      f\big(\gamma(t)\big)</m> e <m>\gamma'(t)</m>.</p></li>
+      <li><p>Vamos experimentar nos exemplos acima!</p>.</li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Regra da Cadeia - o teorema</title>
+
+    <p>Começamos com a:</p>
+
+    <dl pause="yes">
+      <li><proposition
+      xml:id="prop-precadeia">
+      <statement>
+        <p>Sejam <m>f\colon A\subseteq\R^2\to\R</m> uma função
+        diferenciável em <m>(x_0,y_0)</m>. Então, existe
+        <m>\phi\colon\R^2\to\R</m>, contínua em <m>(x_0,y_0)</m> tal
+        que <me>f(x,y)=f(x_0,y_0)+\big\langle\nabla
+        f(x_0,y_0),(x-x_0,y-y_0)\big\rangle +\varphi(x,y)\|(x-x_0,y-y_0)\|.</me>
+	</p>
+      </statement>
+      </proposition></li>
+      <li><theorem xml:id="teo-cadeia">
+	<statement>
+	  <p>Se <m>f\colon A\subseteq\R^2\to\R</m> é diferenciável em <m>(x_0,y_0)</m> e
+	  <m>\gamma\colon I\subseteq\R\to\R^2</m> satisfaz
+	  <m>\gamma(t_0)=(x_0,y_0)</m> e é derivável em <m>t_0</m>,
+	  então <me>\dfrac{d}{dt}(f\circ
+	  \gamma)\Big|_{t=t_0}=\Big\langle\nabla
+	  f\big(\gamma(t_0)\big),\gamma'(t_0)\Big\rangle.</me></p>
+	</statement>
+      </theorem></li>
+      <li><corollary xml:id="cor-gradniv">
+	<statement>
+	  <p>Se <m>f</m> é diferenciável em <m>(x_0,y_0)</m> e
+	  <m>\gamma\colon I\subseteq\R\to\R^2</m> parametriza uma
+	  curva de nível de <m>f</m>, então <me>\Big\langle\nabla
+	  f\big(\gamma(t)\big),\gamma'(t)\Big\rangle=0, \forall t\in
+	  I.</me></p>
+	</statement>
+      </corollary></li>
+      <li><p><term>Mantra</term>: o gradiente de <m>f</m> é
+      perpendicular à qualquer uma de suas curvas de nível.</p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Derivadas direcionais e crescimento máximo</title>
+
+    <p>estava tarde, vamos na raça!</p>
+    
+  </slide>
+
+  <slide>
+    <title>Power compostas</title>
+
+    <p>Nothing can stop us now...</p>
+  </slide>
+
+</section>

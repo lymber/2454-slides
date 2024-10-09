@@ -69,6 +69,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     <xi:include href="./05-func_limites.ptx" />
     <xi:include href="./06-derpar.ptx" />
     <xi:include href="./07-diff.ptx" />
+    <xi:include href="./08-cadeiadir.ptx" />
     <!-- <xi:include href="./99-sample_stuff.ptx" /> -->
   </slideshow>
 </pretext>
