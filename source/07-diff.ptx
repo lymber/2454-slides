@@ -74,13 +74,16 @@
       <ul pause="yes" cols="2">
 	<li><m>f(x,y)=\begin{cases} \dfrac{xy}{x^2+y^2},&amp;\text{ se
 	}(x,y)\neq (0,0)\\ \hfill 0,&amp;\text{ se }(x,y)=(0,0)
-	\end{cases}</m>;</li>
+	\end{cases}</m>; <url
+	href="https://www.desmos.com/3d/vjiqsfwlhv">gráfico</url>.</li>
 	<li><m>f(x,y)=\begin{cases} \dfrac{x^3}{x^2+y^2},&amp;\text{ se
 	}(x,y)\neq (0,0)\\ \hfill 0,&amp;\text{ se }(x,y)=(0,0)
-	\end{cases}</m>;</li>
+	\end{cases}</m>; <url
+	href="https://www.desmos.com/3d/nnkvmodkq9">gráfico</url>.</li>
 	<li><m>f(x,y)=\begin{cases} \dfrac{x^2y^2}{x^2+y^2},&amp;\text{ se
 	}(x,y)\neq (0,0)\\ \hfill 0,&amp;\text{ se }(x,y)=(0,0)
-	\end{cases}</m>.</li>
+	\end{cases}</m>; <url
+	href="https://www.desmos.com/3d/k4chntre1n">gráfico</url>.</li>
     </ul></li>
     </dl>
   </slide>
@@ -98,7 +101,7 @@
       </statement>
       </theorem></li>
       <li><title>Exemplos:</title>
-      <ul pause="yes">
+      <ol pause="yes" marker="i.">
 	<li><m>f(x,y)=x^2\cos(xy)-\ln(1+x^2)y+7</m>;</li>
 	<li><m>f(x,y)=\begin{cases} \dfrac{x^3}{x^2+y^2},&amp;\text{ se
 	}(x,y)\neq (0,0)\\ \hfill 0,&amp;\text{ se }(x,y)=(0,0)
@@ -108,7 +111,7 @@
 	}(x,y)\neq (0,0)\\
 	\hfill 0,&amp;\text{ se }(x,y)=(0,0)
 	\end{cases}</m>.</li>
-      </ul></li>
+      </ol></li>
       <li><definition xml:id="def-planotg">
 	<statement>
 	  <p>Se <m>f</m> é diferenciável em <m>(x_0,y_0)</m>, o
@@ -121,7 +124,17 @@
 	  <m>n_f(x_0,y_0)=\big(f_x(x_0,y_0),f_y(x_0,y_0), -1\big)</m>.</p>
 	</statement>
       </definition></li>
-      <li><p>Vejamos isso em casa exemplo acima.</p></li>
+      <li><p>Vejamos isso em cada exemplo acima:
+      <ol pause="yes" cols="3" marker="i.">
+	<li>Contas no papel, figura figura <url
+	href="https://www.desmos.com/3d/lbdfvc5hze">aqui</url>.</li>
+	<li>Contas no papel, figura <url
+	href="https://www.desmos.com/3d/nnkvmodkq9">aqui</url>.</li>
+	<li>Contas no papel, figura <url
+	href="https://www.desmos.com/3d/amxwoqsyrc">aqui</url>.</li>
+      </ol>
+    </p>
+      </li>
     </dl>
   </slide>
   
