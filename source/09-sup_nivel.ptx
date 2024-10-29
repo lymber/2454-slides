@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="sup_nivel">
+  <title>Funções a três variáveis e Superfícies de Nível</title>
+
+  <slide>
+    <title>Funções a Três Variáveis - Primeiras considerações</title>
+
+    <dl pause="yes">
+      <li><p>Vamos estudar agora uma situação análoga a tudo o que já
+      vimos, porém com uma dimensão a mais: <m>f\colon
+      A\subseteq\R^3\to\R</m>.</p></li>
+      <li><title>Exemplos:</title>
+      <p pause="yes"><m>f(x,y,z)=2x-3y+4z-7</m>;</p>
+      <p pause="yes"><m>f(x,y,z)=x^2+y^2+z^2</m>;</p>
+      <p pause="yes"><m>f(x,y,z)=x^2+y^2-z^2</m>;</p>
+      </li>
+      <li><p>O gráfico de uma função <m>f\colon
+      A\subseteq\R^3\to\R</m> é o conjunto <me>\mathrm{Gr}\,
+      f=\big\{(x,y,z,t)\in\R^4\colon t=f(x,y,z)\big\},</me> que é um
+      pouco mais difícil de "enxergar" com nossos olhos e mentes
+      presos a três dimensões. Para ajudar a entender isso melhor, temos a</p></li>
+      <li><definition
+      xml:id="def-supniv">
+      <statement>
+        <p>Sejam <m>f\colon A\subseteq\R^3\to\R</m> uma função e
+        <m>c\in\R</m>. A <term>superfície de nível <m>c</m> de
+        <m>f</m></term> é o conjunto <me>f^{-1}(c)=\big\{(x,y,z)\in
+        A\colon f(x,y,z)=c\big\}.</me>
+	</p>
+      </statement>
+      </definition></li>
+      <li><p><term>Observação:</term> Se <m>c\not\in\im f</m>, então
+      <m>f^{-1}(c)=\emptyset</m>.</p></li>
+      <li><p>Vamos experimentar nos exemplos acima!</p>.</li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Funções a três variáveis - Aspectos Diferenciais</title>
+
+    <p>Todos os conceitos e resultados vistos para funções a duas
+    variáveis (limites, continuidade, derivadas parciais,
+    diferenciabilidade, regra da cadeia) continuam valendo, com as
+    devidas adaptações (valem também para funções definidas em
+    <m>\R^n</m>).</p>
+
+    <dl pause="yes">
+      <li><p>Agora o <term>gradiente de <m>f</m> em
+      <m>(x_0,y_0,z_0)</m></term> é o vetor <m>\nabla
+      f(x_0,y_0,z_0)=\big(f_x(x_0,y_0,z_0),f_y(x_0,y_0,z_0),
+      f_z(x_0,y_0,z_0)\big)</m>.</p>
+      <p>Com ele, vem o previsível </p></li>
+      <li><theorem xml:id="teo-cadeia3d">
+	<statement>
+	  <p>Se <m>f\colon A\subseteq\R^3\to\R</m> é diferenciável em
+	  <m>(x_0,y_0,z_0)</m> e <m>\gamma\colon
+	  I\subseteq\R\to\R^3</m> satisfaz
+	  <m>\gamma(t_0)=(x_0,y_0,z_0)</m> e é derivável em <m>t_0</m>,
+	  então <me>\dfrac{d}{dt}(f\circ
+	  \gamma)\Big|_{t=t_0}=\Big\langle\nabla
+	  f\big(\gamma(t_0)\big),\gamma'(t_0)\Big\rangle.</me></p>
+	</statement>
+      </theorem></li>
+      <li><p>E como fica o mantra análogo às curvas de nível? Vamos experimentar:
+      <ul pause="yes">
+	<li><m>f(x,y,z)=ax+by+cz+d</m>;</li>
+	<li><m>f(x,y,z)=x^2+y^2+z^2-1</m>.</li>
+      </ul></p></li>
+      <li><corollary xml:id="cor-gradniv3d">
+	<statement>
+	  <p>Se <m>f</m> é diferenciável e <m>\gamma\colon
+	  I\subseteq\R\to\R^3</m> parametriza uma curva com imagem
+	  contida em <m>f^{-1}(c)</m>, então <me>\Big\langle\nabla
+	  f\big(\gamma(t)\big),\gamma'(t)\Big\rangle=0, \forall t\in
+	  I.</me></p>
+	</statement>
+      </corollary></li>
+      <li><p><term>Mantra</term>: o gradiente de <m>f</m> é
+      perpendicular à qualquer uma de suas superfícies de nível.</p></li>
+    </dl>
+  </slide>
+
+  <!-- 	Exemplos acima, plano tangente, interseção de superfícies. -->
+  
+  <slide>
+    <title>Plano Tangente a Superfícies de Nível</title>
+
+    <dl pause="yes">
+      <li><p>Podemos então definir o plano tangente a uma superfície de nível:</p></li>
+      <li><definition xml:id="def-supnivtan">
+	<statement>
+	  <p>Sejam <m>f\colon A\subseteq\R^3\to\R</m>, diferenciável
+	  em <m>(x_0,y_0,z_0)\in A</m> tal que <m>\nabla
+	  f(x_0,y_0,z_0)\neq(0,0,0)</m>. O <term>plano tangente à
+	  superfície de nível de <m>f</m> no ponto
+	  <m>(x_0,y_0,z_0)</m></term> é dado por <me>\big\langle\nabla
+	  f(x_0,y_0,z_0),(x-x_0,y-y_0,z-z_0)\big\rangle=0,</me> ou,
+	  mais explicitamente,
+	  <m>\boxed{f_x(x_0,y_0,z_0)(x-x_0)+f_y(x_0,y_0,z_0)(y-y_0)+
+	  f_z(x_0,y_0,z_0)(z-z_0)=0}</m>.</p>
+	  <p>A <term>reta normal</term> a esta superfície no ponto
+	  <m>(x_0,y_0,z_0)</m> tem equação <m>\boxed{r\colon
+	  (x,y,z)=(x_0,y_0,z_0)+\lambda \nabla
+	  f(x_0,y_0,z_0)}</m>.</p>
+	</statement>
+      </definition></li>
+      <li><p><term>Exemplos:</term> lâminas anteriores.</p>
+      </li>
+      <li><p><term>Exercício:</term> Ache todos os pontos do hiperboloide
+      <m>x^2-y^2+2z^2=1</m> nos quais a reta normal é paralela ao
+      segmento que une <m>(3,-1,0)</m> e <m>(5,3,6)</m>. <url href="https://www.desmos.com/3d/ltsr27gea2">Figura</url>.</p></li>
+      <li><p><term>Observação:</term> esta definição generaliza a de plano tangente para gráficos de funções a duas variáveis.</p></li>
+      <li><p><term>Interseção de superfícies</term>: se
+      <m>f^{-1}(c_1)\cap g^{-1}(c_2)</m> é um a curva contendo o ponto
+      <m>(x_0,y_0,z_0)</m>, como determinar o vetor tangente a esta
+      curva nesse ponto? <url
+      href="https://www.desmos.com/3d/wflbtpwu03">Figura</url>.</p></li>
+      <li><p><term>Exercício:</term> Ache a reta tangente à interseção
+      do gráfico de <m>f(x,y)=x^3+y^3+2</m> com o cilindro
+      <m>x^2+y^2=2</m> no ponto <m>(1,1,4)</m>.</p></li>
+    </dl>
+    
+  </slide>
+
+  <!-- <slide> -->
+  <!--   <title>Derivadas direcionais e crescimento máximo II</title> -->
+
+  <!--   <dl pause="yes"> -->
+  <!--     <li><title>Exemplos</title> -->
+  <!--     <ul pause="yes"> -->
+  <!-- 	<li><m>f(x,y)=\begin{cases} \dfrac{xy}{x^2+y^2},&amp;\text{ se -->
+  <!-- 	}(x,y)\neq (0,0)\\ \hfill 0,&amp;\text{ se }(x,y)=(0,0) -->
+  <!-- 	\end{cases}</m> e <m>v=(a,b)</m> em <m>(x_0,y_0)= (0,0)</m>. -->
+  <!-- 	</li> -->
+  <!-- 	<li><m>f(x,y)=\begin{cases} \dfrac{x^3}{x^2+y^2},&amp;\text{ se -->
+  <!-- 	}(x,y)\neq (0,0)\\ \hfill 0,&amp;\text{ se }(x,y)=(0,0) -->
+  <!-- 	\end{cases}</m> e <m>v=(a,b)</m> em <m>(x_0,y_0)= (0,0)</m>. -->
+  <!-- 	</li> -->
+  <!--     </ul> -->
+  <!--     </li> -->
+  <!--     <li><title>Observação:</title> -->
+  <!--     <p>Em vista do teorema anterior, a derivada direcional deve ser -->
+  <!--     uma função linear das coordenadas de <m>v</m>. Se isto não -->
+  <!--     acontecer, concluimos que a função não é diferenciável no -->
+  <!--     ponto.</p> -->
+  <!--     <p pause="yes">Num certo ponto <m>(x_0,y_0)</m> a derivada -->
+  <!--     direcional pode existir em todas as direções e, mesmo assim, a -->
+  <!--     função não ser diferenciável nesse ponto!</p> -->
+  <!--     </li> -->
+  <!--     <li><p>Observando que <m>\big\langle\nabla -->
+  <!--     f(x_0,y_0),v\big\rangle=\big\|\nabla -->
+  <!--     f(x_0,y_0)\big\|\big\|v\big\|\cos\theta = \big\|\nabla -->
+  <!--     f(x_0,y_0)\big\|\cos\theta</m> só depende de <m>\theta</m>, temos -->
+  <!--     que:</p></li> <li><corollary xml:id="cor-crescmax"> -->
+  <!-- 	<statement> -->
+  <!-- 	  <p>Se <m>f\colon A\subseteq\R^2\to\R</m> é diferenciável em -->
+  <!-- 	  <m>(x_0,y_0)\in A</m>, então a direção e sentido com a maior -->
+  <!-- 	  taxa de crescimento para <m>f</m> em <m>(x_0,y_0)</m> é a de -->
+  <!-- 	  <m>\nabla f(x_0,y_0)</m>.</p> -->
+  <!-- 	</statement> -->
+  <!--     </corollary> -->
+  <!--     </li> -->
+  <!--     <li><p><term>Exemplo:</term> Dada a função <m>T(x,y)=x^2+2y^2</m>, -->
+  <!--     determine a trajetória de uma partícula que parte -->
+  <!--     <m>(x_0,y_0)=(1,1)</m> de modo que, ao londo desta trajetória, o -->
+  <!--     valor de <m>T</m> aumente o máximo possível. <url -->
+  <!--     href="https://www.desmos.com/3d/omgzsywers">Figura</url>.</p> -->
+  <!--     </li> -->
+  <!--   </dl> -->
+  <!-- </slide> -->
+  
+  <!-- <slide> -->
+  <!--   <title>Outras compostas</title> -->
+
+  <!--   <p>Podemos considerar outras duas compostas:</p> -->
+
+  <!--   <dl pause="yes"> -->
+  <!--     <li><title>Primeiro Caso:</title> -->
+  <!--     <p>Dadas <m>g\colon A\subseteq\R^2\to I\subseteq\R</m> e -->
+  <!--     <m>f\colon I\to\R</m>, temos a composta <m>h=f\circ g\colon -->
+  <!--     A\to\R</m>, dada por <m>h(x,y)=(f\circ -->
+  <!--     g)(x,y)=f\big(g(x,y)\big)</m>.</p></li> -->
+  <!--     <li><proposition xml:id="prop-cadeia1"> -->
+  <!-- 	<statement>Se <m>g</m> é diferenciável em <m>(x_0,y_0)</m> e -->
+  <!--     <m>f</m> é derivável em <m>g(x_0,y_0)</m>, então <m>h</m> é -->
+  <!--     diferenciável em <m>(x_0,y_0)</m>, valendo <me>\dfrac{\partial h}{\partial -->
+  <!--     x}(x_0,y_0)=f'\big(g(x_0,y_0)\big)\dfrac{\partial g}{\partial -->
+  <!--     x}(x_0,y_0)\qquad\text{e}\qquad \dfrac{\partial h}{\partial -->
+  <!--     x}(x_0,y_0)=f'\big(g(x_0,y_0)\big)\dfrac{\partial g}{\partial -->
+  <!-- 	y}(x_0,y_0)</me></statement> -->
+  <!--     </proposition> -->
+  <!--     <p pause="yes"><term>Desafio:</term> Dê significado para -->
+  <!--     <m>\dfrac{\partial h}{\partial v}(x_0,y_0)</m> e deduza uma -->
+  <!--     fórmula quendo <m>v</m> é um vetor unitário do plano.</p></li> -->
+  <!--     <li><title>Segundo Caso:</title> -->
+  <!--     <p>Dadas <m>g,h\colon A\subseteq\R^2\to\R</m> e <m>f\colon -->
+  <!--     B\to\R</m>, tais que <m>\big(g(u,v),h(u,v)\big)\in B</m>, para todos -->
+  <!--     <m>(u,v)\in A</m>, temos a composta <m>z=f\circ(g,h)\colon -->
+  <!--     A\to\R</m>, dada por -->
+  <!--     <m>z(u,v)=f\big(g(u,v),h(u,v)\big)</m>.</p></li> -->
+  <!--     <li><proposition xml:id="prop-cadeia2"> -->
+  <!-- 	<statemnet>Se <m>g</m> e <m>h</m> são diferenciáveis em -->
+  <!-- 	<m>(u_0,v_0)</m> e <m>f</m> é diferenciável em -->
+  <!-- 	<m>(x_0,y_0)=\big(g(u_0,v_0),h(u_0,v_0)\big)</m>, então <m>z</m> -->
+  <!-- 	é diferenciável em <m>(u_0,v_0)</m>, valendo <me>\dfrac{\partial -->
+  <!-- 	z}{\partial u}(u_0,v_0)=\dfrac{\partial f}{\partial -->
+  <!-- 	x}(x_0,y_0)\dfrac{\partial g}{\partial -->
+  <!-- 	u}(u_0,x_0)+\dfrac{\partial f}{\partial -->
+  <!-- 	y}(x_0,y_0)\dfrac{\partial h}{\partial u}(u_0,x_0)\qquad e -->
+  <!-- 	\qquad \dfrac{\partial z}{\partial v}(u_0,u_0)=\dfrac{\partial -->
+  <!-- 	f}{\partial x}(x_0,y_0)\dfrac{\partial g}{\partial -->
+  <!-- 	v}(u_0,x_0)+\dfrac{\partial f}{\partial -->
+  <!-- 	y}(x_0,y_0)\dfrac{\partial h}{\partial v}(u_0,x_0)</me> -->
+  <!-- 	</statemnet> -->
+  <!--     </proposition> -->
+  <!--     </li> -->
+  <!--   </dl> -->
+  <!-- </slide> -->
+
+</section>
