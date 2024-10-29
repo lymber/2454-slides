@@ -174,7 +174,7 @@
       <p>Dadas <m>g\colon A\subseteq\R^2\to I\subseteq\R</m> e
       <m>f\colon I\to\R</m>, temos a composta <m>h=f\circ g\colon
       A\to\R</m>, dada por <m>h(x,y)=(f\circ
-      g)(x,y)f\big(g(x,y)\big)</m>.</p></li>
+      g)(x,y)=f\big(g(x,y)\big)</m>.</p></li>
       <li><proposition xml:id="prop-cadeia1">
 	<statement>Se <m>g</m> é diferenciável em <m>(x_0,y_0)</m> e
       <m>f</m> é derivável em <m>g(x_0,y_0)</m>, então <m>h</m> é
