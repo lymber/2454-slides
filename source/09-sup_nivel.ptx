@@ -81,8 +81,6 @@
     </dl>
   </slide>
 
-  <!-- 	Exemplos acima, plano tangente, interseção de superfícies. -->
-  
   <slide>
     <title>Plano Tangente a Superfícies de Nível</title>
 
@@ -122,100 +120,4 @@
     </dl>
     
   </slide>
-
-  <!-- <slide> -->
-  <!--   <title>Derivadas direcionais e crescimento máximo II</title> -->
-
-  <!--   <dl pause="yes"> -->
-  <!--     <li><title>Exemplos</title> -->
-  <!--     <ul pause="yes"> -->
-  <!-- 	<li><m>f(x,y)=\begin{cases} \dfrac{xy}{x^2+y^2},&amp;\text{ se -->
-  <!-- 	}(x,y)\neq (0,0)\\ \hfill 0,&amp;\text{ se }(x,y)=(0,0) -->
-  <!-- 	\end{cases}</m> e <m>v=(a,b)</m> em <m>(x_0,y_0)= (0,0)</m>. -->
-  <!-- 	</li> -->
-  <!-- 	<li><m>f(x,y)=\begin{cases} \dfrac{x^3}{x^2+y^2},&amp;\text{ se -->
-  <!-- 	}(x,y)\neq (0,0)\\ \hfill 0,&amp;\text{ se }(x,y)=(0,0) -->
-  <!-- 	\end{cases}</m> e <m>v=(a,b)</m> em <m>(x_0,y_0)= (0,0)</m>. -->
-  <!-- 	</li> -->
-  <!--     </ul> -->
-  <!--     </li> -->
-  <!--     <li><title>Observação:</title> -->
-  <!--     <p>Em vista do teorema anterior, a derivada direcional deve ser -->
-  <!--     uma função linear das coordenadas de <m>v</m>. Se isto não -->
-  <!--     acontecer, concluimos que a função não é diferenciável no -->
-  <!--     ponto.</p> -->
-  <!--     <p pause="yes">Num certo ponto <m>(x_0,y_0)</m> a derivada -->
-  <!--     direcional pode existir em todas as direções e, mesmo assim, a -->
-  <!--     função não ser diferenciável nesse ponto!</p> -->
-  <!--     </li> -->
-  <!--     <li><p>Observando que <m>\big\langle\nabla -->
-  <!--     f(x_0,y_0),v\big\rangle=\big\|\nabla -->
-  <!--     f(x_0,y_0)\big\|\big\|v\big\|\cos\theta = \big\|\nabla -->
-  <!--     f(x_0,y_0)\big\|\cos\theta</m> só depende de <m>\theta</m>, temos -->
-  <!--     que:</p></li> <li><corollary xml:id="cor-crescmax"> -->
-  <!-- 	<statement> -->
-  <!-- 	  <p>Se <m>f\colon A\subseteq\R^2\to\R</m> é diferenciável em -->
-  <!-- 	  <m>(x_0,y_0)\in A</m>, então a direção e sentido com a maior -->
-  <!-- 	  taxa de crescimento para <m>f</m> em <m>(x_0,y_0)</m> é a de -->
-  <!-- 	  <m>\nabla f(x_0,y_0)</m>.</p> -->
-  <!-- 	</statement> -->
-  <!--     </corollary> -->
-  <!--     </li> -->
-  <!--     <li><p><term>Exemplo:</term> Dada a função <m>T(x,y)=x^2+2y^2</m>, -->
-  <!--     determine a trajetória de uma partícula que parte -->
-  <!--     <m>(x_0,y_0)=(1,1)</m> de modo que, ao londo desta trajetória, o -->
-  <!--     valor de <m>T</m> aumente o máximo possível. <url -->
-  <!--     href="https://www.desmos.com/3d/omgzsywers">Figura</url>.</p> -->
-  <!--     </li> -->
-  <!--   </dl> -->
-  <!-- </slide> -->
-  
-  <!-- <slide> -->
-  <!--   <title>Outras compostas</title> -->
-
-  <!--   <p>Podemos considerar outras duas compostas:</p> -->
-
-  <!--   <dl pause="yes"> -->
-  <!--     <li><title>Primeiro Caso:</title> -->
-  <!--     <p>Dadas <m>g\colon A\subseteq\R^2\to I\subseteq\R</m> e -->
-  <!--     <m>f\colon I\to\R</m>, temos a composta <m>h=f\circ g\colon -->
-  <!--     A\to\R</m>, dada por <m>h(x,y)=(f\circ -->
-  <!--     g)(x,y)=f\big(g(x,y)\big)</m>.</p></li> -->
-  <!--     <li><proposition xml:id="prop-cadeia1"> -->
-  <!-- 	<statement>Se <m>g</m> é diferenciável em <m>(x_0,y_0)</m> e -->
-  <!--     <m>f</m> é derivável em <m>g(x_0,y_0)</m>, então <m>h</m> é -->
-  <!--     diferenciável em <m>(x_0,y_0)</m>, valendo <me>\dfrac{\partial h}{\partial -->
-  <!--     x}(x_0,y_0)=f'\big(g(x_0,y_0)\big)\dfrac{\partial g}{\partial -->
-  <!--     x}(x_0,y_0)\qquad\text{e}\qquad \dfrac{\partial h}{\partial -->
-  <!--     x}(x_0,y_0)=f'\big(g(x_0,y_0)\big)\dfrac{\partial g}{\partial -->
-  <!-- 	y}(x_0,y_0)</me></statement> -->
-  <!--     </proposition> -->
-  <!--     <p pause="yes"><term>Desafio:</term> Dê significado para -->
-  <!--     <m>\dfrac{\partial h}{\partial v}(x_0,y_0)</m> e deduza uma -->
-  <!--     fórmula quendo <m>v</m> é um vetor unitário do plano.</p></li> -->
-  <!--     <li><title>Segundo Caso:</title> -->
-  <!--     <p>Dadas <m>g,h\colon A\subseteq\R^2\to\R</m> e <m>f\colon -->
-  <!--     B\to\R</m>, tais que <m>\big(g(u,v),h(u,v)\big)\in B</m>, para todos -->
-  <!--     <m>(u,v)\in A</m>, temos a composta <m>z=f\circ(g,h)\colon -->
-  <!--     A\to\R</m>, dada por -->
-  <!--     <m>z(u,v)=f\big(g(u,v),h(u,v)\big)</m>.</p></li> -->
-  <!--     <li><proposition xml:id="prop-cadeia2"> -->
-  <!-- 	<statemnet>Se <m>g</m> e <m>h</m> são diferenciáveis em -->
-  <!-- 	<m>(u_0,v_0)</m> e <m>f</m> é diferenciável em -->
-  <!-- 	<m>(x_0,y_0)=\big(g(u_0,v_0),h(u_0,v_0)\big)</m>, então <m>z</m> -->
-  <!-- 	é diferenciável em <m>(u_0,v_0)</m>, valendo <me>\dfrac{\partial -->
-  <!-- 	z}{\partial u}(u_0,v_0)=\dfrac{\partial f}{\partial -->
-  <!-- 	x}(x_0,y_0)\dfrac{\partial g}{\partial -->
-  <!-- 	u}(u_0,x_0)+\dfrac{\partial f}{\partial -->
-  <!-- 	y}(x_0,y_0)\dfrac{\partial h}{\partial u}(u_0,x_0)\qquad e -->
-  <!-- 	\qquad \dfrac{\partial z}{\partial v}(u_0,u_0)=\dfrac{\partial -->
-  <!-- 	f}{\partial x}(x_0,y_0)\dfrac{\partial g}{\partial -->
-  <!-- 	v}(u_0,x_0)+\dfrac{\partial f}{\partial -->
-  <!-- 	y}(x_0,y_0)\dfrac{\partial h}{\partial v}(u_0,x_0)</me> -->
-  <!-- 	</statemnet> -->
-  <!--     </proposition> -->
-  <!--     </li> -->
-  <!--   </dl> -->
-  <!-- </slide> -->
-
 </section>
