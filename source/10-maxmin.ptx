@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="maxmin">
+  <title>Máximos e Mínimos de funções a várias variáveis</title>
+
+  <slide>
+    <title>Funções a duas variáveis - Primeiras considerações</title>
+
+    <dl pause="yes">
+      <li><p>Vamos estudar agora uma situação que preserva alguma analogia com o que sabemos do cálculo 1, mas é preciso ter cuidado!</p></li>
+      <li><definition
+      xml:id="def-maxmin">
+      <statement>
+        <p>Sejam <m>f\colon A\subseteq\R^2\to\R</m> uma função. Um
+        ponto <m>(x_0,y_0)\in A</m> é <term>ponto de máximo local de
+        <m>f</m></term> se existe <m>r&gt;0</m> tal que <m>f(x,y)\leq
+        f(x_0,y_0)</m>, para todo <m>(x,y)\in B_r(x_0,y_0)</m>.</p>
+	<p>Ainda, <m>(x_0,y_0)</m> é <term>ponto de máximo (global) de
+	<m>f</m></term> se <m>f(x,y)\leq f(x_0,y_0)</m>, para todo
+	<m>(x,y)\in A</m>.</p>
+      </statement>
+      </definition></li>
+      <li><p><term>Observação:</term> A definições de mínimo local e
+      global são análogas.</p></li>
+      <li><p>Vamos estavelecer uma primeira analogia com os resultados
+      conhecidos para uma variável.</p>.</li>
+      <li><theorem xml:id="teo-maxmin">
+	<statement><p>Sejam <m>A\subseteq\R^2</m> um conjunto aberto e
+	<m>(x_0,y_0)</m> um ponto de máximo ou mínimo local de
+	<m>f</m>. Então <m>\nabla
+	f(x_0,y_0)=(0,0)</m>.</p></statement>
+      </theorem></li>
+      <li><p><term>Atenção!</term> Assim como no cálculo 1, não vale
+      uma recíproca para o resultado anterior.</p></li>
+      <li><p>Um ponto <m>(x_0,y_0)</m> tal que <m>\nabla
+      f(x_0,y_0)=(0,0)</m> é um <term>ponto crítico de
+      <m>f</m></term>.</p></li>
+      <li><p><term>Exemplos:</term>
+      <ul cols="2" pause="yes">
+	<li><m>f(x,y)=x^2+y^2</m></li>
+	<li><m>f(x,y)=x^3+y^3</m></li>
+      </ul></p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Funções a duas variáveis - Segundas considerações</title>
+
+    <p>Agora algo que realmente é diferente: em funções de uma
+    variável o sinal da segunda derivada ajuda a determinar se um
+    ponto crítico é de máximo ou de mínimo. Vamos tentar algo parecido
+    aqui. Começamos com a</p>
+
+    <dl pause="yes">
+      <li><proposition xml:id="prop-maxminsegder">
+	<statement>
+	  <p>Sejam <m>A\subseteq\R^2</m> um aberto e <m>f\colon
+	  A\subseteq\R^3\to\R</m> é diferenciável. Se
+	  <m>(x_0,y_0,z_0)</m> é máximo local de <m>f</m>, então
+	  <m>f_{xx}(x_0,y_0)\leq 0</m> e <m>f_{yy}(x_0,y_0)\leq
+	  0</m>.</p>
+	</statement>
+      </proposition></li>
+      <li><p><term>Atenção!</term> A recíprova não vale. Considere
+      <m>f(x,y)=x^2-3xy+y^2</m>, veja a <url
+      href="https://www.desmos.com/3d/11zop8vjhm">figura</url>.</p></li>
+      <li><p>Devemos levar em conta as derivadas mistas. Mais
+      precisamente definimos</p></li>
+      <li><definition xml:id="def-hess">
+	<statement><p>Sejam <m>A\subseteq\R^2</m>um aberto e
+	<m>f\colon A\to\R</m> uma função que admite todas as segundas
+	derivadas em <m>(x_0,y_0)</m>. A <term>matriz Hessiana de
+	<m>f</m> em <m>(x_0,y_0)</m></term> é <me>H_f(x_0,y_0)=
+	\begin{pmatrix} f_{xx}(x_0,y_0)&amp;f_{xy}(x_0,y_0)\\
+	f_{yx}(x_0,y_0)&amp;f_{yy}(x_0,y_0) \end{pmatrix}.</me></p></statement>
+      </definition></li>
+      <li><p><term>Observação:</term> quando <m>f</m> é de classe
+      <m>\mathcal{C}^2</m>, temos que <m>H_f(x_0,y_0)</m> é uma matriz
+      simétrica (e portanto diagonalizável). Com isso podemos
+      demonstrar o</p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Funções a duas variáveis - O teorema de Calssificação</title>
+
+    <dl pause="yes">
+      <li><theorem xml:id="teo-maxminclass">
+	<statement>Sejam <m>A\subseteq\R^2</m> um aberto, <m>f\colon
+	A\to\R</m> uma função de classe <m>\mathcal{C}^2</m> e
+	<m>(x_0,y_0)</m> um ponto crítico de <m>f</m>. Então,
+	<ul pause="yes">
+	  <li>Se <m>\det H_f(x_0,y_0)&lt;0</m>, então <m>(x_0,y_0)</m>
+	  é um ponto de sela para <m>f</m>;</li>
+	  <li>Se <m>\det H_f(x_0,y_0)&gt;0</m> e
+	  <m>f_{xx}(x_0,y_0)&gt;0</m>, então <m>(x_0,y_0)</m> é um
+	  ponto mínimo local para <m>f</m>;</li>
+	  <li>Se <m>\det H_f(x_0,y_0)&gt;0</m> e
+	  <m>f_{xx}(x_0,y_0)&lt;0</m>, então <m>(x_0,y_0)</m> é um
+	  ponto máximo local para <m>f</m>;</li>
+	</ul>
+	</statement>
+      </theorem></li>
+      <li><p><term>Observação:</term> Um ponto de sela é aquele que
+      possui duas direções ao longo das quais <m>f</m> assume máximo
+      local numa e mínimo local noutra. Nas condições acima essas
+      direções são mutamente ortogonais.</p></li>
+      <li><p>Vamos para a lista de exercícios!</p></li>
+    </dl>
+  </slide>
+</section>
