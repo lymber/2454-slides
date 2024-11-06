@@ -55,8 +55,8 @@
       <li><proposition xml:id="prop-maxminsegder">
 	<statement>
 	  <p>Sejam <m>A\subseteq\R^2</m> um aberto e <m>f\colon
-	  A\subseteq\R^3\to\R</m> é diferenciável. Se
-	  <m>(x_0,y_0,z_0)</m> é máximo local de <m>f</m>, então
+	  A\subseteq\R^2\to\R</m> diferenciável. Se
+	  <m>(x_0,y_0)</m> é máximo local de <m>f</m>, então
 	  <m>f_{xx}(x_0,y_0)\leq 0</m> e <m>f_{yy}(x_0,y_0)\leq
 	  0</m>.</p>
 	</statement>
@@ -82,7 +82,7 @@
   </slide>
 
   <slide>
-    <title>Funções a duas variáveis - O teorema de Calssificação</title>
+    <title>Funções a duas variáveis - O teorema de Classificação</title>
 
     <dl pause="yes">
       <li><theorem xml:id="teo-maxminclass">
@@ -106,6 +106,162 @@
       local numa e mínimo local noutra. Nas condições acima essas
       direções são mutamente ortogonais.</p></li>
       <li><p>Vamos para a lista de exercícios!</p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Máximos e Mínimos - além de conjuntos abertos</title>
+
+    <dl pause="yes">
+      <li><p>Tudo o que vimos nas lâminas anteriores valia para
+      funções definidas em conjuntos abertos. O que acontece quando
+      essa condição não é satisfeita.</p></li>
+      <li><p><term>Exemplo:</term> Considere
+      <m>A=\big\{(x,y)\in\R^2\colon x^2+y^2\leq 1\big\}</m> e
+      <m>f(x,y)=x^2+y^2</m>.</p> <p pause="yes"><m>f(1,0)=1</m> e
+      <m>f(x,y)\leq 1</m>. Logo <m>(1,0)</m> é ponto de máximo para
+      <m>f</m>, mas <m>\nabla f(1,0)=(2,0)\neq (0,0)</m>.</p>
+      <p pause="yes">Isso acontece pois <m>A</m> não é um conjunto
+      aberto!</p> <p pause="yes">Quais as condições sobre <m>A</m>
+      para que uma função contínua <m>f\colon A\subseteq\R^2\to\R</m>
+      tenha sempre um ponto de máximo (ou de mínimo)? Temos o</p></li>
+      <li><theorem>
+	<name>(Weierstrass)</name>
+	<statement><p>Sejam <m>A\subseteq\R^2\to\R</m> um conjunto
+	compacto e <m>f\colon A\to\R</m> contínua. Então existem
+	<m>(x_0,y_0),(x_1,y_)\in A</m> tais que <me>f(x_0,y_0)\leq
+	f(x,y)\leq f(x_1,y_1),\text{ para todos }(x,y)\in A.</me></p>
+	</statement>
+      </theorem>
+      </li>
+      <li><p><term>Observações:</term>
+      <ul pause="yes">
+	<li>As duas hipóteses são necessárias. Vejamos exemplos
+	removendo cada uma das hipóteses.</li>
+	<li>Não vale a recíproca. Vejamos um exemplo.</li>
+      </ul></p></li>
+      <li><p><term>Exemplo:</term> <m>A=\big\{(x,y)\in\R^2\colon x\geq
+      0, y\geq 0, 2y+x-4\leq 0, y+x-3\leq 0\big\}</m> e
+      <m>f(x,y)=3x+5y-3</m>. Veja o que acontece <url
+      href="https://www.desmos.com/calculator/yl5ki6dglg">aqui</url> e
+      <url
+      href="https://www.desmos.com/3d/3wsu5q2yov">aqui</url>.</p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>E se <m>f</m> é não linear ou <m>A</m> é delimitado por
+    inequações não lineares?</title>
+
+    <dl pause="yes">
+      <li><p>Poderíamos tentar parametrizar a fronteira de
+      <m>A</m>. Dá super certo...</p></li>
+      <li><p>...se conseguirmos parametrizar! E se não
+      soubermos?</p></li>
+      <li><p>Vamos estudar casos lineares para entender melhor a
+      situação:</p></li>
+      <li><p><term>No plano (caso 0):</term> <m>f(x,y)=ax+by+c</m>. Quem é
+      <m>f^{-1}(0)</m>? Quando podemos escrever <m>y=y(x)</m> ou
+      <m>x=x(y)</m>?</p></li>
+      <li><p><term>No espaço (caso I):</term>
+      <m>f(x,y,z)=ax+by+cz+d</m>. Quem é <m>f^{-1}(0)</m>? Quando
+      podemos escrever <m>z=z(x,y)</m> ou <m>x=x(y,z)</m> ou ainda
+      <m>y=y(x,z)</m>?</p></li>
+      <li><p><term>No espaço (caso II):</term> <m>f(x,y,z)=ax+by+cz+d,
+      g(x,y,z)=lx+my+nz+</m>. Quem é <m>f^{-1}(0)\cap g^{-1}(0)</m>?
+      Como podemos descrever essa interseção em termos das variáveis
+      <m>x,y,z</m>?</p></li>
+      <li><p>Generalizando o caso 0 acima, temos o:</p></li>
+      <li><theorem xml:id="teo-funcimp1">
+	<statement>
+	  <p>Seja <m>f\colon A\subseteq\R^2\to\R</m> um função de
+	  classe <m>\mathcal{C}^1</m> em <m>(x_0,y_0)</m> tal que
+	  <m>f(x_0,y_0)=0</m>. Se <m>\dfrac{\partial f}{\partial
+	  y}(x_0,y_0)\neq 0</m>, então existem intervalos abertos
+	  <m>I,J\subseteq\R</m>, com <m>x_0\in I</m> e <m>y_0\in J</m>
+	  e uma função derivável <m>y\colon I\to J</m> tais que
+	  <m>y(x_0)=y_0</m> e <m>f\big(x,y(x)\big)=0</m>, para todo
+	  <m>x\in I</m>. Além disso,
+	  <m>y'(x)=-\dfrac{f_x\big(x,y(x)\big)}
+	  {f_y\big(x,y(x)\big)}</m>.</p>
+	</statement>
+      </theorem></li>
+      <li><p>Estude a aplicação do teorema acima para as funções
+      <m>f(x,y)=x^2+y^2-1</m>, <m>f(x,y)=x^2-y^2</m> e
+      <m>f(x,y)=x^3-y^3</m>.</p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Casos I e II:</title>
+
+    <dl pause="yes">
+      <li><theorem xml:id="teo-funcimp2">
+	<statement>
+	  <p>Seja <m>f\colon A\subseteq\R^3\to\R</m> um função de
+	  classe <m>\mathcal{C}^1</m> em <m>(x_0,y_0,z_0)</m> tal que
+	  <m>f(x_0,y_0,z_0)=0</m>. Se <m>\dfrac{\partial f}{\partial
+	  z}(x_0,y_0,z_0)\neq 0</m>, então existem abertos
+	  <m>B\subseteq\R^2</m> e <m>J\subseteq\R</m>, com
+	  <m>(x_0,y_0)\in B</m> e <m>z_0\in J</m> e uma função de
+	  classe <m>\mathcal{C}^1</m>, <m>z\colon B\to J</m>, tais que
+	  <m>z(x_0,y_0)=z_0</m> e <m>f\big(x,y,z(x,y)\big)=0</m>, para
+	  todo <m>(x,y)\in B</m>.</p>
+	  <p>Além disso, <m>\dfrac{\partial
+	  z}{\partial x}(x,y)=-\dfrac{f_x\big(x,y,z(x,y)\big)}
+	  {f_z\big(x,y,z(x,y)\big)}</m> e <m>\dfrac{\partial
+	  z}{\partial y}(x,y)=-\dfrac{f_y\big(x,y,z(x,y)\big)}
+	  {f_z\big(x,y,z(x,y)\big)}</m>.</p>
+	</statement>
+      </theorem>
+      </li>
+      <li><theorem xml:id="teo-funcimp3">
+	<statement>
+	  <p>Sejam <m>f,g\colon A\subseteq\R^3\to\R</m> funções de
+	  classe <m>\mathcal{C}^1</m> em <m>(x_0,y_0,z_0)</m> tais que
+	  <m>f(x_0,y_0,z_0)=g(x_0,y_0,z_0)=0</m>. Se
+	  <m>\det\begin{pmatrix} f_y&amp;f_z\\ g_y&amp; g_z
+	  \end{pmatrix}(x_0,y_0,z_0)\neq 0</m>, então existem abertos
+	  <m>B,I,J\subseteq\R</m>, com <m>x_0\in B</m>, <m>y_0\in I</m>
+	  e <m>z_0\in J</m> e funções de classe <m>\mathcal{C}^1</m>,
+	  <m>y\colon B\to I</m> e <m>z\colon B\to J</m>, tais que
+	  <m>y(x_0)=y_0)</m>, <m>z(x_0)=z_0</m> e
+	  <m>f\big(x,y(x),z(x)\big)=0</m>, para todo <m>x\in
+	  B</m>.</p>
+	  <p>Além disso, <m>y'(x)=-\dfrac{\det\begin{pmatrix}
+	  f_x&amp;f_z\\ g_x&amp; g_z
+	  \end{pmatrix}\big(x,y(x),z(x)\big)}{\det\begin{pmatrix}
+	  f_y&amp;f_z\\ g_y&amp; g_z
+	  \end{pmatrix}\big(x,y(x),z(x)\big)}</m> e <m>z'(x)=-\dfrac{\det\begin{pmatrix}
+	  f_y&amp;f_x\\ g_y&amp; g_x
+	  \end{pmatrix}\big(x,y(x),z(x)\big)}{\det\begin{pmatrix}
+	  f_y&amp;f_z\\ g_y&amp; g_z
+	  \end{pmatrix}\big(x,y(x),z(x)\big)}</m>.</p>
+	</statement>
+      </theorem>
+      </li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Exemplos</title>
+
+    <dl pause="yes">
+      <li><p>Considere o sistema <m>\begin{cases}
+      x^2-y^2+2xz+2y&amp;=1\\
+      2x-y+z&amp;=0
+      \end{cases}</m>.</p>
+      <p>Mostre que a solução desse sistema é uma curva passando por
+      <m>P=(0,1,1)</m>, determinando sua reta tangente nesse
+      ponto. Quais são as variáveis livres e quais as dependentes
+      dessa solução, numa vizinhança de <m>P</m>?</p>
+      </li>
+      <li><p>Discuta a aplicabilidade do último teorema da lâmina
+      anterior ao sistema <m>\begin{cases} 3x^2+2y^2+z^2&amp;=9\\
+      x^2+y^2+z^2-8x-6y-8z+24&amp;=0 \end{cases}</m>, observando que
+      <m>(1,1,2)</m> é uma de suas soluções.</p></li>
+      <li><p>Idem para o sistema <m>\begin{cases} x^2+y^2&amp;=1\\
+      x^2+z^2&amp;=1 \end{cases}</m>.</p></li>
     </dl>
   </slide>
 </section>
