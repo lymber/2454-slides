@@ -119,7 +119,7 @@
       <li><p><term>Exemplo:</term> Considere
       <m>A=\big\{(x,y)\in\R^2\colon x^2+y^2\leq 1\big\}</m> e
       <m>f(x,y)=x^2+y^2</m>.</p> <p pause="yes"><m>f(1,0)=1</m> e
-      <m>f(x,y)\leq 1</m>. Logo <m>(1,0)</m> é ponto de máximo para
+      <m>f(x,y)\leq 1, \forall (x,y)\in A</m>. Logo <m>(1,0)</m> é ponto de máximo para
       <m>f</m>, mas <m>\nabla f(1,0)=(2,0)\neq (0,0)</m>.</p>
       <p pause="yes">Isso acontece pois <m>A</m> não é um conjunto
       aberto!</p> <p pause="yes">Quais as condições sobre <m>A</m>
@@ -158,8 +158,9 @@
       <m>A</m>. Dá super certo...</p></li>
       <li><p>...se conseguirmos parametrizar! E se não
       soubermos?</p></li>
-      <li><p>Vamos estudar casos lineares para entender melhor a
-      situação:</p></li>
+      <li><p>Vamos estudar casos lineares para entender melhor como
+      podemos descrever a fronteira dos conjuntos em que estamos
+      interessados:</p></li>
       <li><p><term>No plano (caso 0):</term> <m>f(x,y)=ax+by+c</m>. Quem é
       <m>f^{-1}(0)</m>? Quando podemos escrever <m>y=y(x)</m> ou
       <m>x=x(y)</m>?</p></li>
@@ -254,14 +255,274 @@
       <p>Mostre que a solução desse sistema é uma curva passando por
       <m>P=(0,1,1)</m>, determinando sua reta tangente nesse
       ponto. Quais são as variáveis livres e quais as dependentes
-      dessa solução, numa vizinhança de <m>P</m>?</p>
+      dessa solução, numa vizinhança de <m>P</m>? Veja a ilustração
+      <url href="https://www.desmos.com/3d/ys3mto50ox">aqui</url>.</p>
       </li>
       <li><p>Discuta a aplicabilidade do último teorema da lâmina
       anterior ao sistema <m>\begin{cases} 3x^2+2y^2+z^2&amp;=9\\
       x^2+y^2+z^2-8x-6y-8z+24&amp;=0 \end{cases}</m>, observando que
-      <m>(1,1,2)</m> é uma de suas soluções.</p></li>
+      <m>(1,1,2)</m> é uma de suas soluções. Veja a ilustração <url
+      href="https://www.desmos.com/3d/wbzr8bkpay">aqui</url>.</p></li>
       <li><p>Idem para o sistema <m>\begin{cases} x^2+y^2&amp;=1\\
-      x^2+z^2&amp;=1 \end{cases}</m>.</p></li>
+      x^2+z^2&amp;=1 \end{cases}</m>. Veja a ilustração <url
+      href="https://www.desmos.com/3d/ibp0btotxi">aqui</url>.</p></li>
+      <li><title>Resumindo:</title>
+      <p>O que os teoremas anteriores mostrar é que , nas condições
+      dadas, podemos escrever, ao menos no entorno de um ponto de uma
+      curva de nível, uma superfície de nível ou a interseção de
+      superfícies de nível, esse conjutno como uma curva ou gráfico de
+      uma função a duas variáveis.</p></li>
+      <li><title>Aplicação:</title>
+      <p>Vamos usar isso para determinar condições necessáras para
+      que um ponto seja ponto de máximo ou de mínimo local sobre
+      certas classes de curvas no plano ou no espaço, bem como em
+      superfícies.</p></li>
     </dl>
   </slide>
+
+  <slide>
+    <title>Máximos e Mínimos Condicionados - I</title>
+
+    <dl pause="yes">
+      <li><p>Seja <m>A\subseteq\R^n</m>.</p></li>
+      <li><title>Nomenclatura:</title>
+      <p>O <term>interior de <m>A</m></term>, <m>\mathrm{int}A</m>, é
+      o maior conjunto aberto contido em <m>A</m>.</p>
+      <p>O <term>fecho de <m>A</m></term>,
+      <m>\overline{A}</m>, é o menor conjunto fechado que contém
+      <m>A</m>.</p></li>
+      <li><p>A <term>fronteira de <m>A</m></term>, <m>\partial A</m>,
+      é definida como <m>\partial A=\overline{A}\setminus \mathrm{int}
+      A</m>.</p></li>
+      <li><title>Usando esses nomes no problema anterior:</title>
+      <p>Determinar os pontos em <m>A=\big\{(x,y)\in\R^2\colon
+      x^2+y^2\leq 1\big\}</m>, se existirem, onde <m>f(x,y)=xy</m>
+      assume valor máximo e mínimo.</p>
+      <p>Já fizemos parametrizando
+      a fronteira e vamos rever como fazer sem parametrizar... Uma
+      animação no plano está <url
+      href="https://www.desmos.com/calculator/ffbaobkzwr">aqui</url> e
+      a figura no espaço correspondente <url
+      href="https://www.desmos.com/3d/fpszch0bbz">aqui</url>.</p></li>
+      <li><p>Em geral temos o:</p></li>
+      <li><theorem xml:id="teo-lagr2">
+	<statement>
+	  <p>Sejam <m>f,g\colon A\subseteq\R^2\to\R</m> de classe
+	  <m>\mathcal{C}^1</m> e <m>B=\big\{(x,y)\in\R^2\colon
+	  g(x,y)=0\big\}</m>. Suponha que <m>\nabla g(x,y)\neq
+	  (0,0)</m>, para todo <m>(x,y)\in B</m>. Se <m>(x_0,y_0)</m>
+	  é ponto de máximo ou de mínimo local de <m>f</m> sobre
+	  <m>B</m>, então <m>\big\{\nabla f(x_0,y_0),\nabla
+	  g(y_0,y_0)\big\}</m> é linearmente dependente em
+	  <m>\R^2</m>.</p>
+	</statement>
+      </theorem></li>
+      <li><title>Observações:</title>
+      <p>A condição de dependência linear e o não anulamento de
+      <m>\nabla g</m> equivalem a dizer que existe <m>\lambda=\lambda
+      (x_0,y_0)\in\R</m> tal que <m>\nabla f(x_0,y_0)=\lambda\nabla
+      g(x_0,y_0)</m>. Tal <m>\lambda</m> é chamado <term>multiplicador de
+      Lagrange</term> do problema.</p>
+      <p>Todo candidato a máximo ou mínimo local de <m>f</m> sobre
+      <m>B</m> satisfaz o sistema <m>\begin{cases}
+      \nabla f(x_0,y_0)&amp;=\lambda\nabla g(x_0,y_0)\\
+      g(x_0,y_0)&amp;=0
+      \end{cases}\implies\begin{cases}
+      \det\big(\nabla f(x_0,y_0),\nabla g(x_0,y_0)\big)&amp;=0\\
+      g(x_0,y_0)&amp;=0
+      \end{cases}
+      </m>.</p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Máximos e Mínimos Condicionados - II</title>
+
+    <dl pause="yes">
+      <li><title>Exemplos:</title>
+      <p>Determine, caso existam, os valores máximo e mínimo de
+      <m>f(x,y)=xye^{-x^2-y^2}</m> no conjunto
+      <m>D=\big\{(x,y)\in\R^2\colon x^2+y^2\leq 2\big\}</m>.</p>
+      <p>Determine caso existam, os valores máximo e mínimo de
+      <m>f(x,y)=2x^3+y^4</m> sobre o conjunto
+      <m>D=\big\{(x,y)\in\R^2\colon x^2+y^2=1, y\geq 0, x\in
+      [0,\frac{1}{2}]\big\}</m>.</p>
+      </li>
+      <li><p>Para entender o segundo exemplo acima, precisamos de um
+      esboço da demonstração do teorema... Lousa!</p></li>
+      <li><title>Caso semelhante:</title> <p>Determine o máximo de
+      <m>f\colon A\subseteq\R^3\to\R</m> quando restrita à uma
+      superfície (de nível de outra função <m>g\colon
+      A\subseteq\R^3\to\R</m>). Ou seja, determinar o valor máximo e
+      mínimo de <m>f(x,y,z)</m>, sujeito a <m>g(x,y,z)=0</m>. Vamos
+      ver a analogia com o caso anterior na lousa.</p></li>
+      <li><p>Temos então o:</p></li>
+      <li><theorem xml:id="teo-lagr31">
+	<statement>
+	  <p>Sejam <m>f,g\colon A\subseteq\R^3\to\R</m> de classe
+	  <m>\mathcal{C}^1</m> e <m>B=\big\{(x,y,z)\in\R^3\colon
+	  g(x,y,z)=0\big\}</m>. Suponha que <m>\nabla g(x,y,z)\neq
+	  (0,0,0)</m>, para todo <m>(x,y,z)\in B</m>. Se <m>(x_0,y_0,z_0)</m>
+	  é ponto de máximo ou de mínimo local de <m>f</m> sobre
+	  <m>B</m>, então <m>\big\{\nabla f(x_0,y_0,z_0),\nabla
+	  g(y_0,y_0,z_0)\big\}</m> é linearmente dependente em
+	  <m>\R^3</m>.</p>
+	</statement>
+      </theorem></li>
+      <li><title>Observações:</title>
+      <p>Novamente, a condição de dependência linear e o não
+      anulamento de <m>\nabla g</m> equivalem a dizer que existe
+      <m>\lambda=\lambda (x_0,y_0,z_0)\in\R</m> tal que <m>\nabla
+      f(x_0,y_0,z_0)=\lambda\nabla g(x_0,y_0,z_0)</m>. Como antes,
+      <m>\lambda</m> é chamado <term>multiplicador de Lagrange</term>
+      do problema.</p>
+      <p>Todo candidato a máximo ou mínimo local de <m>f</m> sobre
+      <m>B</m> satisfaz o sistema <m>\begin{cases}
+      \nabla f(x_0,y_0,z_0)&amp;=\lambda\nabla g(x_0,y_0,z_0)\\
+      g(x_0,y_0,z_0)&amp;=0
+      \end{cases}\implies\begin{cases}
+      \nabla f(x_0,y_0,z_0)\wedge\nabla g(x_0,y_0,z_0)&amp;=(0,0,0)\\
+      g(x_0,y_0,z_0)&amp;=0
+      \end{cases}
+      </m>.</p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Máximos e Mínimos Condicionados - III</title>
+    
+    <dl pause="yes">
+      <li><title>Exemplo:</title>
+      <p>Determine, caso existam, os valores máximo e mínimo de
+      <m>f(x,y,z)=x^2-2x+y^2-4y+z^2-6z</m> no conjunto
+      <m>R=\big\{(x,y,z)\in\R^3\colon x^2+y^2+z^2\leq 56\big\}</m>.</p></li>
+      <li><p>Para entender o segundo exemplo acima, precisamos de um
+      esboço da demonstração do teorema... Lousa!</p></li>
+      <li><title>Último caso:</title> <p>Determine o máximo de
+      <m>f\colon A\subseteq\R^3\to\R</m> quando restrita à uma curva
+      (interseção de duas superfícies de nível funções <m>g,h\colon
+      A\subseteq\R^3\to\R</m>). Ou seja, determinar o valor máximo e
+      mínimo de <m>f(x,y,z)</m>, sujeito a <m>g(x,y,z)=0</m> e
+      <m>h(x,y,z)=0</m>. Vamos entender o problema e uma possível solução na
+      lousa.</p></li>
+      <li><p>Temos então o:</p></li>
+      <li><theorem xml:id="teo-lagr32">
+	<statement>
+	  <p>Sejam <m>f,g,h\colon A\subseteq\R^3\to\R</m> de classe
+	  <m>\mathcal{C}^1</m> e <m>B=\big\{(x,y,z)\in\R^3\colon
+	  g(x,y,z)=0, h(x,y,z)=0\big\}</m>. Suponha que
+	  <m>\big\{\nabla g(x,y,z),\nabla h(x,y,z)\big\}</m> é
+	  linearmente independente, para todo <m>(x,y,z)\in B</m>. Se
+	  <m>(x_0,y_0,z_0)</m> é ponto de máximo ou de mínimo local de
+	  <m>f</m> sobre <m>B</m>, então <m>\big\{\nabla
+	  f(x_0,y_0,z_0),\nabla g(y_0,y_0,z_0),\nabla
+	  h(y_0,y_0,z_0)\big\}</m> é linearmente dependente em
+	  <m>\R^3</m>.</p>
+	</statement>
+      </theorem></li>
+      <li><title>Observações:</title>
+      <p>A condição de dependência linear e o não
+      anulamento de <m>\nabla g</m> equivalem a dizer que existem
+      <m>\lambda=\lambda (x_0,y_0,z_0),\mu=\mu(x_0,y_0,z_0)\in\R</m> tais que <m>\nabla
+      f(x_0,y_0,z_0)=\lambda\nabla g(x_0,y_0,z_0)+\mu\nabla h(x_0,y_0,z_0)</m>. Os escalares
+      <m>\lambda, \mu</m> são chamados <term>multiplicadores de Lagrange</term>
+      do problema.</p>
+      <p>Todo candidato a máximo ou mínimo local de <m>f</m> sobre
+      <m>B</m> satisfaz o sistema <m>\begin{cases}
+      \nabla f(x_0,y_0,z_0)&amp;=\lambda\nabla g(x_0,y_0,z_0)+\mu\nabla h(x_0,y_0,z_0)\\
+      g(x_0,y_0,z_0)&amp;=0\\
+      h(x_0,y_0,z_0)&amp;=0\\
+      \end{cases}\implies\begin{cases}
+      \big[\nabla f(x_0,y_0,z_0),\nabla g(x_0,y_0,z_0),\nabla h(x_0,y_0,z_0)\big]&amp;=0\\
+      g(x_0,y_0,z_0)&amp;=0\\
+      h(x_0,y_0,z_0)&amp;=0
+      \end{cases}
+      </m>.</p></li>
+    </dl>
+  </slide>
+
+  <slide>
+    <title>Máximos e Mínimos Condicionados - IV</title>
+
+    <dl pause="yes">
+      <li><title>Exemplo:</title>
+      <p>Determine, caso existam, os valores máximo e mínimo de
+      <m>f(x,y,z)=x+y+z</m> no conjunto
+      <m>C=\big\{(x,y,z)\in\R^3\colon x^2+y^2=1,
+      4x+4y=z^2\big\}</m>. Veja a situação <url
+      href="https://www.desmos.com/3d/xowhyx2enh">aqui</url>.</p>
+      <p>Determine, caso existam, os valores máximo e mínimo de
+      <m>f(x,y,z)=x^3+y^3+z^3</m> no conjunto
+      <m>C=\big\{(x,y,z)\in\R^3\colon x^2+y^2+z^2=1, x+y+z=1\big\}</m>.</p></li>
+      <li><title>Um desafio:</title> <p>Dentre todos os pontos da
+      curva <m>y^2=x(x+1)</m> determine, caso existam, aqueles que
+      estão mais próximos de <m>(2,0)</m>.</p></li>
+    </dl>
+  </slide>
+
+  <!-- <slide> -->
+  <!--   <dl pause="yes"> -->
+  <!--     <li><p> -->
+  <!-- 	Αγαπητοί φοιτητές,</p> -->
+	
+  <!-- 	<p>Καθώς φτάνουμε στο τέλος αυτής της ακαδημαϊκής χρονιάς, θέλω να σας -->
+  <!-- 	εκφράσω τις θερμές μου ευχαριστίες για την αφοσίωσή σας, τη συνεργασία -->
+  <!-- 	σας και την επιμονή που δείξατε. Η πορεία σας ως μαθητές και η -->
+  <!-- 	συνεισφορά σας στην ακαδημαϊκή κοινότητα αποτέλεσαν για εμένα μια -->
+  <!-- 	σημαντική και ουσιαστική εμπειρία.</p> -->
+	
+  <!-- 	<p>Η εκπαίδευση, όπως και η ζωή, είναι ένα συνεχές ταξίδι γεμάτο -->
+  <!-- 	προκλήσεις και ευκαιρίες. Εύχομαι, από καρδιάς, να συνεχίσετε με -->
+  <!-- 	τη ζέση και την περιέργεια που διακρίνουν τους αληθινούς -->
+  <!-- 	αναζητητές της γνώσης. Η σταδιοδρομία σας, είτε στον ακαδημαϊκό -->
+  <!-- 	χώρο, είτε στον επαγγελματικό, να είναι γεμάτη επιτυχίες, -->
+  <!-- 	προσωπική ικανοποίηση και αδιάκοπη πρόοδο. Να παραμείνετε πάντα -->
+  <!-- 	πιστοί στις αξίες της αρετής, της προσπάθειας και της αλήθειας.</p> -->
+	
+  <!-- 	<p>Αυτό που μάθατε κατά τη διάρκεια της χρονιάς δεν είναι μόνο οι -->
+  <!-- 	γνώσεις που αποκτήσατε, αλλά και η ικανότητα να σκέφτεστε κριτικά, -->
+  <!-- 	να ερωτάτε συνεχώς και να αναζητάτε νέες απαντήσεις. Αυτές οι -->
+  <!-- 	δεξιότητες θα είναι οι βασικοί σύμμαχοί σας στη ζωή και στην -->
+  <!-- 	καριέρα σας.</p> -->
+	
+  <!-- 	<p>Είμαι βέβαιος ότι, ό,τι κι αν επιλέξετε να κάνετε στο μέλλον, θα -->
+  <!-- 	συνεχίσετε να φωτίζετε τον δρόμο σας με το φως της γνώσης και της -->
+  <!-- 	επιμονής. Σας εύχομαι καλή συνέχεια στην πορεία σας και ελπίζω να -->
+  <!-- 	συναντηθούμε ξανά στο μέλλον, σε άλλες ευκαιρίες συνεργασίας και -->
+  <!-- 	δημιουργίας.</p> -->
+
+  <!--     <p>Με εκτίμηση και τις καλύτερες ευχές μου, Αλέξανδρος</p></li> -->
+  <!--     <li><p>Queridos alunos,</p> -->
+
+  <!--     <p>À medida que nos aproximamos do final deste ano acadêmico, -->
+  <!--     quero expressar meus sinceros agradecimentos pela dedicação, -->
+  <!--     cooperação e persistência de cada um de vocês. A jornada de -->
+  <!--     vocês como estudantes e as suas contribuições para a comunidade -->
+  <!--     acadêmica foram uma experiência significativa e valiosa para -->
+  <!--     mim.</p> -->
+
+  <!--     <p>A educação, assim como a vida, é uma jornada contínua, cheia -->
+  <!--     de desafios e oportunidades. Desejo sinceramente que continuem -->
+  <!--     com a paixão e a curiosidade que caracterizam os verdadeiros -->
+  <!--     buscadores do conhecimento. Que suas carreiras, seja no meio -->
+  <!--     acadêmico ou em sua vida profissional, sejam repletas de -->
+  <!--     sucesso, realização pessoal e progresso constante. Mantenham-se -->
+  <!--     sempre fiéis aos valores da virtude, do esforço e da -->
+  <!--     verdade.</p> -->
+      
+  <!--     <p>O que aprenderam durante este ano não é apenas o conhecimento -->
+  <!--     que adquiriram, mas também a capacidade de pensar criticamente, -->
+  <!--     de fazer perguntas continuamente e de buscar novas -->
+  <!--     respostas. Essas habilidades serão os seus principais aliados na -->
+  <!--     vida e na carreira.</p> -->
+
+  <!--     <p>Tenho plena confiança de que, qualquer que seja a escolha que -->
+  <!--     façam no futuro, continuarão a iluminar o caminho de vocês com a -->
+  <!--     luz do conhecimento e da perseverança. Desejo a todos o melhor -->
+  <!--     em sua jornada e espero que nos encontremos novamente no futuro, -->
+  <!--     em novas oportunidades de colaboração e criação.</p> -->
+
+  <!--     <p>Com respeito e os meus melhores votos, Alexandre</p></li> -->
+  <!--   </dl> -->
+  <!-- </slide> -->
 </section>
