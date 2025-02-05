@@ -41,7 +41,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     <!-- <subtitle>para a Escola Politécnica</subtitle> -->
     
     <frontmatter>
-      <titlepage>
+      <bibinfo>
         <author>
           <personname>Alexandre Lymberopoulos</personname>
           <institution>Departamento de Matemática -
@@ -49,6 +49,9 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
         </author>
         <event>Escola Politécnica - Engenharia Mecatrônica</event>
         <date>2024 - Segundo Semestre</date>
+      </bibinfo>
+      <titlepage>
+	<titlepage-items />
       </titlepage>
       
       <!-- <abstract> -->
